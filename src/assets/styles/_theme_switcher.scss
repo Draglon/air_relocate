@@ -1,0 +1,11 @@
+.theme-switcher {
+  background-color: var(--theme-switcher-bg-color) !important;
+  border: 1px solid var(--theme-switcher-border-color) !important;
+  color: var(--theme-switcher-color) !important;
+
+  &:hover {
+    background-color: var(--theme-switcher-bg-color-hover) !important;
+    border: 1px solid var(--theme-switcher-border-color-hover) !important;
+    color: var(--theme-switcher-color-hover) !important;
+  }
+}
