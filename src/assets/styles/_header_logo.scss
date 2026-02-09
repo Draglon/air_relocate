@@ -1,3 +1,10 @@
+.logo {
+  padding-top: 21px;
+
+  @media (min-width: 900px) {
+    padding-top: 33px;
+  }
+}
 .logo__img {
   width: 118px;
   height: 15px;

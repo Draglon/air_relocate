@@ -6,10 +6,9 @@ import logoXL_SRC from "@/../public/images/logo/xl/logo.svg";
 import logoMD_SRC from "@/../public/images/logo/md/logo.svg";
 import logoSM_SRC from "@/../public/images/logo/sm/logo.svg";
 import logoXS_SRC from "@/../public/images/logo/xs/logo.svg";
-// import { Title } from "@/views/shared/antd/Typography";
-// import Button from "@/views/shared/antd/Button";
 // import ThemeSwitcher from "@/views/shared/ThemeSwitcher";
 // import LocalSwitcherSelect from "@/views/shared/LocalSwitcherSelect";
+import MenuMobile from "@/views/layouts/headers/GuestHeader/MenuMobile";
 
 const GuestHeader = () => {
   const t = useTranslations("header");
@@ -24,11 +23,20 @@ const GuestHeader = () => {
           <Image className="logo__img" src={logoXS_SRC} alt={t("logoAlt")} width="118" height="15" />
         </picture>
 
-        {/* Needless for this test task */}
-        {/* <div className="header__menu">
-          <LocalSwitcherSelect />
-          <ThemeSwitcher />
-        </div> */}
+        <div className="hamburger-menu">
+          <button className="btn btn-menu">
+            <i className="icon icon-menu"></i>
+          </button>
+        </div>
+
+        <MenuMobile />
+
+        {/*
+          <div className="header__menu">
+            <LocalSwitcherSelect />
+            <ThemeSwitcher />
+          </div>
+        */}
       </div>
     </header>
   );
