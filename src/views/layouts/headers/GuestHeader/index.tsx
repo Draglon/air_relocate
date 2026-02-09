@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { useState } from 'react';
 import { useTranslations } from "next-intl";
 
 import logoXL_SRC from "@/../public/images/logo/xl/logo.svg";
@@ -12,6 +13,7 @@ import MenuMobile from "@/views/layouts/headers/GuestHeader/MenuMobile";
 
 const GuestHeader = () => {
   const t = useTranslations("header");
+  const [activeMenuMobile, setActiveMenuMobile] = useState(false);
 
   return (
     <header className="header">
@@ -24,12 +26,12 @@ const GuestHeader = () => {
         </picture>
 
         <div className="hamburger-menu">
-          <button className="btn btn-menu">
+          <button className="btn btn-menu" onClick={() => setActiveMenuMobile(true)}>
             <i className="icon icon-menu"></i>
           </button>
         </div>
 
-        <MenuMobile />
+        <MenuMobile active={activeMenuMobile} setActiveMenu={setActiveMenuMobile} />
 
         {/*
           <div className="header__menu">

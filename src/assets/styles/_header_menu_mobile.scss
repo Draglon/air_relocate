@@ -26,11 +26,19 @@
 
 .menu-mobile {
   background-color: var(--blue);
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  @media (min-width: 1280px) {
+    display: none !important;
+  }
+
+  &.menu-mobile--active {
+    display: block;
+  }
 
   .btn-menu-close {
     background-color: var(--white_0);
@@ -49,5 +57,78 @@
 }
 
 .menu-mobile__nav {
+  padding-top: 53px;
+  padding-bottom: 10px;
+}
+.menu-mobile__nav-link {
+  color: var(--white);
+  display: block;
+  font-family: Geometria, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  line-height: 60px;
+  height: 60px;
+  text-align: center;
+  text-decoration: none;
 
+  &:hover {
+    background-color: var(--blue-dark);
+    font-weight: 700;
+  }
+}
+
+.menu-mobile__buttons {
+  border-top: 1px solid var(--white_20);
+  padding-top: 27px;
+  text-align: center;
+  .btn {
+    border-radius: 3px;
+    font-family: Geometria, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 4px;
+    text-indent: 2px;
+  }
+  .btn-login {
+    background-color: var(--white);
+    border: 1px solid var(--white);
+    color: var(--blue);
+    width: 243px;
+    height: 45px;
+    margin-bottom: 9px;
+  }
+  .btn-clients {
+    background-color: var(--white_0);
+    border: 1px solid var(--white_30);
+    color: var(--white);
+    width: 243px;
+    height: 45px;
+  }
+}
+
+.lang {
+  padding-top: 17px;
+  .btn-lang {
+    background-color: var(--blue);
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    color: var(--white);
+    font-family: Geometria, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding-top: 2px;
+    margin-right: 6px;
+    width: 42px;
+    height: 33px;
+    text-indent: 1px;
+    &:last-child {
+      margin: 0;
+    }
+
+    &--active {
+      background-color: var(--white) !important;
+      color: var(--black) !important;
+    }
+  }
 }

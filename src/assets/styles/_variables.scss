@@ -1,8 +1,8 @@
 :root {
-  // colors
   --white: #fff;
   --white_0: rgba(255,255,255,0);
-  --white_25: rgba(255,255,255,.25);
+  --white_20: rgba(255,255,255,.2);
+  --white_30: rgba(255,255,255,.3);
   --white_67: rgba(255,255,255,.67);
 
   --black: #000;
@@ -45,16 +45,5 @@
 }
 
 .dark {
-  // --background: var(--black);
-  // --text-color: var(--white);
-  // --header-bg-color: var(--black);
-  // --locale-switcher-bg-color: var(--black);
-  // --locale-switcher-bg-color-hover: var(--white_0);
-  // --locale-switcher-bg-color-active: var(--white_25);
-  // --theme-switcher-color: var(--white);
-  // --theme-switcher-color-hover: var(--white);
-  // --theme-switcher-bg-color: var(--black);
-  // --theme-switcher-bg-color-hover: var(--black);
-  // --theme-switcher-border-color: var(--white);
-  // --theme-switcher-border-color-hover: var(--blue);
+
 }
