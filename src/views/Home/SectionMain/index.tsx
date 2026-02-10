@@ -12,8 +12,13 @@ const SectionMain = () => {
   return (
     <section className="section section--main">
       <Title className="section__title" level={1}>
-        <span>{t("title.part_1")}</span>
-        <span>{t("title.part_2")}</span>
+        <span className="section__title-line_1">
+          <span className="plane" />
+          {t("title.part_1")}
+        </span>
+        <span className="section__title-line_2">
+          {t("title.part_2")}
+        </span>
       </Title>
       <Title className="section__subTitle" level={2}>
         {t("subTitle")}

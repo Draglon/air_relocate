@@ -31,7 +31,9 @@ const MenuMobile = ({ active, setActiveMenu }: MenuMobileProps) => {
       <div className="menu-mobile__buttons">
         <Button className="btn btn-login">{t("login")}</Button>
         <Button className="btn btn-clients">{t("clients")}</Button>
-        <div className="lang">
+      </div>
+
+      <div className="lang">
           <Button
             className={clsx("btn-lang", { "btn-lang--active": activeLang === "ru" })}
             onClick={() => setActiveLang("ru")}
@@ -45,7 +47,6 @@ const MenuMobile = ({ active, setActiveMenu }: MenuMobileProps) => {
             EN
           </Button>
         </div>
-      </div>
     </div>
   );
 };

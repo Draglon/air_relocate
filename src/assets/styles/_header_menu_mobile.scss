@@ -80,8 +80,11 @@
 
 .menu-mobile__buttons {
   border-top: 1px solid var(--white_20);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-top: 27px;
-  text-align: center;
   .btn {
     border-radius: 3px;
     font-family: Geometria, sans-serif;
@@ -109,6 +112,7 @@
 
 .lang {
   padding-top: 17px;
+  text-align: center;
   .btn-lang {
     background-color: var(--blue);
     border: 1px solid var(--white);

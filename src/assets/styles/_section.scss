@@ -1,9 +1,13 @@
 .section--main {
-  padding-top: 131px;
+  padding-top: 147px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 100px;
   position: relative;
 
   @media (min-width: 900px) {
-    padding-top: 122px;
+    padding-top: 137px;
+    padding-bottom: 145px;
   }
 
   // Main Title
@@ -11,100 +15,132 @@
     margin-top: 0;
     margin-bottom: 11px;
     text-align: center;
-
     @media (min-width: 900px) {
       margin-bottom: 20px;
     }
 
-    span {
+    .section__title-line_1, .section__title-line_2 {
       font-size: 27px;
       font-weight: 700;
       line-height: 117%;
       text-indent: -2px;
-      display: block;
       text-align: center;
-      position: relative;
-
-      &:first-child {
-        color: var(--blue);
-        display: inline-block;
-        &:before, &:after {
-          content: '';
-          position: absolute;
-          background-repeat: no-repeat;
-        }
-        &:before {
-          top: -72px;
-          left: -10px;
-          width: 145.33px;
-          height: 59.01px;
-          background-size: 145.33px 59.01px;
-          background-image: url("/images/sm/bg-section-plane1x.png");
-          background-image: -webkit-image-set(
-            url("/images/sm/bg-section-plane1x.png") type("image/png") 1x,
-            url("/images/sm/bg-section-plane2x.png") type("image/png") 2x
-          );
-          background-image: image-set(
-            url("/images/sm/bg-section-plane1x.png") type("image/png") 1x,
-            url("/images/sm/bg-section-plane2x.png") type("image/png") 2x
-          );
-          @media (min-width: 900px) {
-            display: none;
-          }
-        }
-        &:after {
-          top: -101px;
-          right: -45px;
-          width: 158px;
-          height: 146px;
-          background-size: 158px 146px;
-          background-image: url("/images/sm/bg-section-man@1x.png");
-          background-image: -webkit-image-set(
-            url("/images/sm/bg-section-man@1x.png") type("image/png") 1x,
-            url("/images/sm/bg-section-man@2x.png") type("image/png") 2x
-          );
-          background-image: image-set(
-            url("/images/sm/bg-section-man@1x.png") type("image/png") 1x,
-            url("/images/sm/bg-section-man@2x.png") type("image/png") 2x
-          );
-          @media (min-width: 900px) {
-            top: -104px;
-            right: -59px;
-            background-image: url("/images/md/bg-section-man@1x.png");
-            background-image: -webkit-image-set(
-              url("/images/md/bg-section-man@1x.png") type("image/png") 1x,
-              url("/images/md/bg-section-man@2x.png") type("image/png") 2x
-            );
-            background-image: image-set(
-              url("/images/md/bg-section-man@1x.png") type("image/png") 1x,
-              url("/images/md/bg-section-man@2x.png") type("image/png") 2x
-            );
-          }
-        }
+      @media (min-width: 900px) {
+        font-size: 40px;
+        line-height: 99%;
       }
-
-      &:last-child {
-        color: var(--black);
-        margin-top: -3px;
-
-        @media (min-width: 900px) {
-          margin-top: -2px;
-        }
-      }
-
-      @media (min-width: 1920px) {
-        font-size: 48px;
-        line-height: 90%;
-      }
-
       @media (min-width: 1280px) {
         font-size: 44px;
         line-height: 99%;
       }
+      @media (min-width: 1920px) {
+        font-size: 48px;
+        line-height: 90%;
+      }
+    }
 
+    .section__title-line_1 {
+      color: var(--blue);
+      display: inline-block;
+      position: relative;
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        background-repeat: no-repeat;
+      }
+      &:before {
+        top: -72px;
+        left: -10px;
+        width: 145.33px;
+        height: 59.01px;
+        background-size: 145.33px 59.01px;
+        background-image: url("/images/sm/bg-section-plane1x.png");
+        background-image: -webkit-image-set(
+          url("/images/sm/bg-section-plane1x.png") type("image/png") 1x,
+          url("/images/sm/bg-section-plane2x.png") type("image/png") 2x
+        );
+        background-image: image-set(
+          url("/images/sm/bg-section-plane1x.png") type("image/png") 1x,
+          url("/images/sm/bg-section-plane2x.png") type("image/png") 2x
+        );
+        @media (min-width: 900px) {
+          top: -35px;
+          left: initial;
+          right: -232px;
+          width: 176.79px;
+          height: 79px;
+          background-size: 176.79px 79px;
+          background-image: url("/images/md/bg-section-plane-right@1x.png");
+          background-image: -webkit-image-set(
+            url("/images/md/bg-section-plane-right@1x.png") type("image/png") 1x,
+            url("/images/md/bg-section-plane-right@2x.png") type("image/png") 2x
+          );
+          background-image: image-set(
+            url("/images/md/bg-section-plane-right@1x.png") type("image/png") 1x,
+            url("/images/md/bg-section-plane-right@2x.png") type("image/png") 2x
+          );
+        }
+      }
+      &:after {
+        top: -101px;
+        right: -45px;
+        width: 158px;
+        height: 146px;
+        background-size: 158px 146px;
+        background-image: url("/images/sm/bg-section-man@1x.png");
+        background-image: -webkit-image-set(
+          url("/images/sm/bg-section-man@1x.png") type("image/png") 1x,
+          url("/images/sm/bg-section-man@2x.png") type("image/png") 2x
+        );
+        background-image: image-set(
+          url("/images/sm/bg-section-man@1x.png") type("image/png") 1x,
+          url("/images/sm/bg-section-man@2x.png") type("image/png") 2x
+        );
+        @media (min-width: 900px) {
+          top: -104px;
+          right: -59px;
+          background-image: url("/images/md/bg-section-man@1x.png");
+          background-image: -webkit-image-set(
+            url("/images/md/bg-section-man@1x.png") type("image/png") 1x,
+            url("/images/md/bg-section-man@2x.png") type("image/png") 2x
+          );
+          background-image: image-set(
+            url("/images/md/bg-section-man@1x.png") type("image/png") 1x,
+            url("/images/md/bg-section-man@2x.png") type("image/png") 2x
+          );
+        }
+      }
+
+      .plane {
+        display: none;
+        @media (min-width: 900px) {
+          display: block;
+          position: absolute;
+          top: -127px;
+          left: -159px;
+          z-index: -1;
+          width: 388px;
+          height: 160px;
+          background-size: 388px 160px;
+          background-image: url("/images/md/bg-section-plane@1x.png");
+          background-image: -webkit-image-set(
+            url("/images/md/bg-section-plane@1x.png") type("image/png") 1x,
+            url("/images/md/bg-section-plane@2x.png") type("image/png") 2x
+          );
+          background-image: image-set(
+            url("/images/md/bg-section-plane@1x.png") type("image/png") 1x,
+            url("/images/md/bg-section-plane@2x.png") type("image/png") 2x
+          );
+        }
+      }
+    }
+
+    .section__title-line_2 {
+      display: block;
+      color: var(--grey-darkest);
+      margin-top: -3px;
       @media (min-width: 900px) {
-        font-size: 40px;
-        line-height: 99%;
+        margin-top: -2px;
       }
     }
   }
@@ -152,6 +188,9 @@
     .section__field {
       margin-bottom: 9px;
       text-align: center;
+      @media (min-width: 900px) {
+        margin-bottom: 0;
+      }
 
       .section__input {
         background-color: var(--white);
@@ -197,6 +236,7 @@
         border-radius: 4px;
         width: 200px;
         height: 54px;
+        transition: none;
         @media (min-width: 900px) {
           width: 77.8px;
         }

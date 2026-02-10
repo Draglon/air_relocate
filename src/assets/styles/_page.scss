@@ -1,50 +1,8 @@
 .page {
   min-height: 100vh;
   position: relative;
-
-  // &:before, &::after {
-  //   content: '';
-  //   position: fixed;
-  // }
-
-  // &:before {
-  //   top: 0;
-  //   left: 0;
-  //   background-size: 630px 396px;
-  //   background-repeat: no-repeat;
-  //   background-image: url("/images/vector_1@1x.png");
-  //   background-image: -webkit-image-set(
-  //     url("/images/vector_1@1x.png") type("image/png") 1x,
-  //     url("/images/vector_1@2x.png") type("image/png") 2x
-  //   );
-  //   background-image: image-set(
-  //     url("/images/vector_1@1x.png") type("image/png") 1x,
-  //     url("/images/vector_1@2x.png") type("image/png") 2x
-  //   );
-  //   width: 630px;
-  //   height: 396px;
-  // }
-
-  // &:after {
-  //   bottom: -105px;
-  //   right: 0;
-  //   background-size: 210px 368px;
-  //   background-repeat: no-repeat;
-  //   background-image: url("/images/vector_2@1x.png");
-  //   background-image: -webkit-image-set(
-  //     url("/images/vector_2@1x.png") type("image/png") 1x,
-  //     url("/images/vector_2@2x.png") type("image/png") 2x
-  //   );
-  //   background-image: image-set(
-  //     url("/images/vector_2@1x.png") type("image/png") 1x,
-  //     url("/images/vector_2@2x.png") type("image/png") 2x
-  //   );
-  //   width: 210px;
-  //   height: 368px;
-  // }
 }
 
 .page__main {
-  padding: 15px;
   position: relative;
 }
