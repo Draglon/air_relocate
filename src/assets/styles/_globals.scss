@@ -13,3 +13,20 @@ ul {
   padding: 0;
   list-style-type: none;
 }
+
+.title {
+  font-family: Geometria, sans-serif;
+}
+
+.input {
+  width: 100%;
+
+  &::placeholder {
+    font-family: Geometria, sans-serif;
+  }
+}
+
+.select {
+  font-family: Geometria, sans-serif;
+  width: 100%;
+}

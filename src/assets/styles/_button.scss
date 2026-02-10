@@ -1,10 +1,10 @@
-// .button--primary {
-//   background-color: var(--button-primary-bg-color);
+.button--primary {
+  background-color: var(--button-primary-bg-color);
 
-//   &:hover, &:focus {
-//     background-color: var(--button-primary-bg-color-hover) !important;
-//   }
-// }
+  &:hover, &:focus {
+    background-color: var(--button-primary-bg-color-hover) !important;
+  }
+}
 
 // .button--secondary {
 //   background-color: var(--button-secondary-bg-color);

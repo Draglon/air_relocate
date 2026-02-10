@@ -1,12 +1,13 @@
 "use client";
 
 import GuestLayout from "@/views/layouts/GuestLayout";
+import SectionMain from "@/views/Home/SectionMain";
 
 const Home = () => {
   return (
     <GuestLayout>
       <div className="page__container">
-        Content
+        <SectionMain />
       </div>
     </GuestLayout>
   );
