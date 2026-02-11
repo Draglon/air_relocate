@@ -1,14 +1,104 @@
 .section--main {
-  padding-top: 147px;
+  padding-top: 148px;
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 100px;
   position: relative;
-
   @media (min-width: 900px) {
     padding-top: 137px;
     padding-bottom: 145px;
   }
+  @media (min-width: 1280px) {
+    padding-top: 166px;
+    padding-bottom: 219px;
+  }
+  @media (min-width: 1920px) {
+    padding-top: 160px;
+    padding-bottom: 228px;
+  }
+  &:before, &:after {
+    content: '';
+    display: none;
+    position: absolute;
+    background-repeat: no-repeat;
+    @media (min-width: 1280px) {
+      display: block;
+    }
+  }
+  &:before {
+    @media (min-width: 1280px) {
+      left: 0;
+      bottom: 70px;
+      width: 358px;
+      height: 611px;
+      background-size: 358px 611px;
+      background-image: url("/images/lg/bg-section-america@1x.png");
+      background-image: -webkit-image-set(
+        url("/images/lg/bg-section-america@1x.png") type("image/png") 1x,
+        url("/images/lg/bg-section-america@2x.png") type("image/png") 2x
+      );
+      background-image: image-set(
+        url("/images/lg/bg-section-america@1x.png") type("image/png") 1x,
+        url("/images/lg/bg-section-america@2x.png") type("image/png") 2x
+      );
+    }
+    @media (min-width: 1920px) {
+      left: 44px;
+      bottom: 48px;
+      width: 555px;
+      height: 566px;
+      background-size: 555px 566px;
+      background-image: url("/images/xl/bg-section-america@1x.png");
+      background-image: -webkit-image-set(
+        url("/images/xl/bg-section-america@1x.png") type("image/png") 1x,
+        url("/images/xl/bg-section-america@2x.png") type("image/png") 2x
+      );
+      background-image: image-set(
+        url("/images/xl/bg-section-america@1x.png") type("image/png") 1x,
+        url("/images/xl/bg-section-america@2x.png") type("image/png") 2x
+      );
+    }
+  }
+  &:after {
+    @media (min-width: 1280px) {
+      right: 0;
+      bottom: 20px;
+      width: 411px;
+      height: 599px;
+      background-size: 411px 599px;
+      background-image: url("/images/lg/bg-section-europe@1x.png");
+      background-image: -webkit-image-set(
+        url("/images/lg/bg-section-europe@1x.png") type("image/png") 1x,
+        url("/images/lg/bg-section-europe@2x.png") type("image/png") 2x
+      );
+      background-image: image-set(
+        url("/images/lg/bg-section-europe@1x.png") type("image/png") 1x,
+        url("/images/lg/bg-section-europe@2x.png") type("image/png") 2x
+      );
+    }
+    @media (min-width: 1920px) {
+      right: 1px;
+      bottom: 2px;
+      width: 629px;
+      height: 597px;
+      background-size: 629px 597px;
+      background-image: url("/images/xl/bg-section-europe@1x.png");
+      background-image: -webkit-image-set(
+        url("/images/xl/bg-section-europe@1x.png") type("image/png") 1x,
+        url("/images/xl/bg-section-europe@2x.png") type("image/png") 2x
+      );
+      background-image: image-set(
+        url("/images/xl/bg-section-europe@1x.png") type("image/png") 1x,
+        url("/images/xl/bg-section-europe@2x.png") type("image/png") 2x
+      );
+    }
+  }
+
+  .section__wrapper {
+    position: relative;
+    z-index: 10;
+  }
+
 
   // Main Title
   .section__title {
@@ -17,6 +107,12 @@
     text-align: center;
     @media (min-width: 900px) {
       margin-bottom: 20px;
+    }
+    @media (min-width: 1280px) {
+      margin-bottom: 28px;
+    }
+    @media (min-width: 1920px) {
+      margin-bottom: 34px;
     }
 
     .section__title-line_1, .section__title-line_2 {
@@ -32,10 +128,12 @@
       @media (min-width: 1280px) {
         font-size: 44px;
         line-height: 99%;
+        text-indent: 0;
       }
       @media (min-width: 1920px) {
         font-size: 48px;
         line-height: 90%;
+        text-indent: -17px;
       }
     }
 
@@ -50,7 +148,7 @@
       }
       &:before {
         top: -72px;
-        left: -10px;
+        left: -9px;
         width: 145.33px;
         height: 59.01px;
         background-size: 145.33px 59.01px;
@@ -80,10 +178,42 @@
             url("/images/md/bg-section-plane-right@2x.png") type("image/png") 2x
           );
         }
+        @media (min-width: 1280px) {
+          top: 3px;
+          right: -215px;
+          width: 176.79px;
+          height: 79px;
+          background-size: 176.79px 79px;
+          background-image: url("/images/lg/bg-section-plane-right@1x.png");
+          background-image: -webkit-image-set(
+            url("/images/lg/bg-section-plane-right@1x.png") type("image/png") 1x,
+            url("/images/lg/bg-section-plane-right@2x.png") type("image/png") 2x
+          );
+          background-image: image-set(
+            url("/images/lg/bg-section-plane-right@1x.png") type("image/png") 1x,
+            url("/images/lg/bg-section-plane-right@2x.png") type("image/png") 2x
+          );
+        }
+        @media (min-width: 1920px) {
+          top: 19px;
+          right: -219px;
+          width: 176.79px;
+          height: 79px;
+          background-size: 176.79px 79px;
+          background-image: url("/images/xl/bg-section-plane-right@1x.png");
+          background-image: -webkit-image-set(
+            url("/images/xl/bg-section-plane-right@1x.png") type("image/png") 1x,
+            url("/images/xl/bg-section-plane-right@2x.png") type("image/png") 2x
+          );
+          background-image: image-set(
+            url("/images/xl/bg-section-plane-right@1x.png") type("image/png") 1x,
+            url("/images/xl/bg-section-plane-right@2x.png") type("image/png") 2x
+          );
+        }
       }
       &:after {
         top: -101px;
-        right: -45px;
+        right: -44px;
         width: 158px;
         height: 146px;
         background-size: 158px 146px;
@@ -109,6 +239,32 @@
             url("/images/md/bg-section-man@2x.png") type("image/png") 2x
           );
         }
+        @media (min-width: 1280px) {
+          top: -103px;
+          right: -69px;
+          background-image: url("/images/lg/bg-section-man@1x.png");
+          background-image: -webkit-image-set(
+            url("/images/lg/bg-section-man@1x.png") type("image/png") 1x,
+            url("/images/lg/bg-section-man@2x.png") type("image/png") 2x
+          );
+          background-image: image-set(
+            url("/images/lg/bg-section-man@1x.png") type("image/png") 1x,
+            url("/images/lg/bg-section-man@2x.png") type("image/png") 2x
+          );
+        }
+        @media (min-width: 1920px) {
+          top: -105px;
+          right: -68px;
+          background-image: url("/images/xl/bg-section-man@1x.png");
+          background-image: -webkit-image-set(
+            url("/images/xl/bg-section-man@1x.png") type("image/png") 1x,
+            url("/images/xl/bg-section-man@2x.png") type("image/png") 2x
+          );
+          background-image: image-set(
+            url("/images/xl/bg-section-man@1x.png") type("image/png") 1x,
+            url("/images/xl/bg-section-man@2x.png") type("image/png") 2x
+          );
+        }
       }
 
       .plane {
@@ -132,15 +288,53 @@
             url("/images/md/bg-section-plane@2x.png") type("image/png") 2x
           );
         }
+        @media (min-width: 1280px) {
+          top: -89px;
+          left: -140px;
+          width: 388px;
+          height: 160px;
+          background-size: 388px 160px;
+          background-image: url("/images/lg/bg-section-plane-left@1x.png");
+          background-image: -webkit-image-set(
+            url("/images/lg/bg-section-plane-left@1x.png") type("image/png") 1x,
+            url("/images/lg/bg-section-plane-left@2x.png") type("image/png") 2x
+          );
+          background-image: image-set(
+            url("/images/lg/bg-section-plane-left@1x.png") type("image/png") 1x,
+            url("/images/lg/bg-section-plane-left@2x.png") type("image/png") 2x
+          );
+        }
+        @media (min-width: 1920px) {
+          top: -110px;
+          left: -149px;
+          width: 388px;
+          height: 160px;
+          background-size: 388px 160px;
+          background-image: url("/images/xl/bg-section-plane-left@1x.png");
+          background-image: -webkit-image-set(
+            url("/images/xl/bg-section-plane-left@1x.png") type("image/png") 1x,
+            url("/images/xl/bg-section-plane-left@2x.png") type("image/png") 2x
+          );
+          background-image: image-set(
+            url("/images/xl/bg-section-plane-left@1x.png") type("image/png") 1x,
+            url("/images/xl/bg-section-plane-left@2x.png") type("image/png") 2x
+          );
+        }
       }
     }
 
     .section__title-line_2 {
       display: block;
       color: var(--grey-darkest);
-      margin-top: -3px;
+      margin-top: -4px;
       @media (min-width: 900px) {
         margin-top: -2px;
+      }
+      @media (min-width: 1280px) {
+        margin-top: -1px;
+      }
+      @media (min-width: 1920px) {
+        margin-top: 8px;
       }
     }
   }
@@ -155,21 +349,21 @@
     text-align: center;
     text-indent: 1px;
     max-width: 320px;
-
-    @media (min-width: 1920px) {
-      font-size: 18px;
-      line-height: 115%;
-    }
-
-    @media (min-width: 1280px) {
-      font-size: 16px;
-      line-height: 145%;
-    }
-
     @media (min-width: 900px) {
       font-size: 15px;
       line-height: 145%;
       max-width: 512px;
+    }
+    @media (min-width: 1280px) {
+      font-size: 16px;
+      line-height: 145%;
+      max-width: 544px;
+    }
+    @media (min-width: 1920px) {
+      font-size: 18px;
+      line-height: 138%;
+      max-width: 600px;
+      text-indent: -20px;
     }
   }
 
@@ -184,12 +378,22 @@
       align-items: flex-start;
       margin-top: 29px;
     }
+    @media (min-width: 1280px) {
+      margin-top: 36px;
+    }
+    @media (min-width: 1920px) {
+      margin-top: 38px;
+    }
 
     .section__field {
       margin-bottom: 9px;
       text-align: center;
       @media (min-width: 900px) {
         margin-bottom: 0;
+      }
+      @media (min-width: 1920px) {
+        position: relative;
+        left: -7px;
       }
 
       .section__input {
@@ -239,6 +443,10 @@
         transition: none;
         @media (min-width: 900px) {
           width: 77.8px;
+        }
+        @media (min-width: 1920px) {
+          position: relative;
+          left: -7px;
         }
         .icon-search {
           color: var(--white);
