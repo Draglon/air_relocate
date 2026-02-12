@@ -1,31 +1,40 @@
 .button--primary {
   background-color: var(--button-primary-bg-color);
-
   &:hover, &:focus {
-    background-color: var(--button-primary-bg-color-hover) !important;
+    background-color: var(--button-primary-bg-color-hover);
+  }
+
+  .text {
+    color: var(--button-primary-color);
   }
 }
 
-// .button--secondary {
-//   background-color: var(--button-secondary-bg-color);
+.button--secondary {
+  background-color: var(--button-secondary-bg-color);
+  &:hover, &:focus {
+    background-color: var(--button-secondary-bg-color-hover);
+  }
 
-//   &:hover, &:focus {
-//     background-color: var(--button-secondary-bg-color-hover) !important;
-//   }
-// }
+  .text {
+    color: var(--button-secondary-color);
+  }
+}
 
-// .button--warning {
-//   background-color: var(--button-warning-bg-color);
+.button--warning {
+  background-color: var(--button-warning-bg-color);
+  &:hover, &:focus {
+    background-color: var(--button-warning-bg-color-hover);
+  }
 
-//   &:hover, &:focus {
-//     background-color: var(--button-warning-bg-color-hover) !important;
-//   }
-// }
+  .text {
+    color: var(--button-warning-color);
+  }
+}
 
-// .button--danger {
-//   background-color: var(--button-danger-bg-color);
+.button--danger {
+  background-color: var(--button-danger-bg-color);
 
-//   &:hover, &:focus {
-//     background-color: var(--button-danger-bg-color-hover) !important;
-//   }
-// }
+  &:hover, &:focus {
+    background-color: var(--button-danger-bg-color-hover);
+  }
+}

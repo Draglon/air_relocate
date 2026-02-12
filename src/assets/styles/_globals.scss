@@ -1,22 +1,23 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background: var(--background);
   color: var(--text-color);
-  margin: 0;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
 }
 
 ul {
-  margin: 0;
-  padding: 0;
   list-style-type: none;
 }
 
-.title {
-  font-family: Geometria, sans-serif;
+.title, .text {
+  font-family: Geometria, sans-serif !important;
 }
 
 .input {

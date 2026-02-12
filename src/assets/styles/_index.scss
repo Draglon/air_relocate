@@ -3,11 +3,18 @@
 @use 'mixins/index';
 @use 'fonts';
 
+@use 'button';
+
 @use 'page';
 @use 'header';
 @use 'header_logo';
 @use 'header_menu_mobile';
 @use 'locale_switcher';
 @use 'theme_switcher';
-@use 'section';
-@use 'button';
+@use 'section_main';
+@use 'section_vacancies';
+@use 'section_cities';
+@use 'section_relocation';
+@use 'section_blog';
+@use 'section_subscription';
+@use 'section_about_us';

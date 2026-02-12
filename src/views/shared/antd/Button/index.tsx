@@ -17,7 +17,9 @@ const Button = ({
     {
       "button--primary": color === "primary",
       "button--danger": color === "danger",
-      "button--default": color === "default",
+      "button--warning": color === "orange",
+      "button--yellow": color === "yellow",
+      "button--secondary": color === "default",
     },
     className
   );
