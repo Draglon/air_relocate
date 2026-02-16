@@ -6,6 +6,42 @@ import photoSRC from "@/../public/images/photo_2.png";
 import Button from "@/views/shared/antd/Button";
 import { Title, Text } from "@/views/shared/antd/Typography";
 
+const articles = [
+  {
+    id: "1",
+    src: photoSRC,
+    alt: "Photo alt",
+    title: "Senior Software Engineer (Full Stack)",
+    description: "Our trading platform is loaded with features. Our easy-to-use interface, quick funding",
+    list: {
+      city: "General VR Solutions",
+      location: "Норвегия, Франфурт на Майне",
+    },
+  },
+  {
+    id: "2",
+    src: photoSRC,
+    alt: "Photo alt",
+    title: "Senior Software Engineer (Full Stack)",
+    description: "Our trading platform is loaded with features. Our easy-to-use interface, quick funding",
+    list: {
+      city: "General VR Solutions",
+      location: "Норвегия, Франфурт на Майне",
+    },
+  },
+  {
+    id: "3",
+    src: photoSRC,
+    alt: "Photo alt",
+    title: "Senior Software Engineer (Full Stack)",
+    description: "Our trading platform is loaded with features. Our easy-to-use interface, quick funding",
+    list: {
+      city: "General VR Solutions",
+      location: "Норвегия, Франфурт на Майне",
+    },
+  }
+];
+
 const SectionVacancies = () => {
   const t = useTranslations("Home");
   const tShared = useTranslations("shared");
@@ -35,31 +71,39 @@ const SectionVacancies = () => {
         </div>
 
         <section className="vacancies">
-          <article className="vacancies__article">
-            <header className="vacancies__header">
-              <picture className="vacancies__picture">
-                <Image className="vacancies__image" src={photoSRC} alt="Photo" width="37" height="37" />
-              </picture>
-              <Title className="vacancies__title" level={3}>Senior Software Engineer (Full Stack)</Title>
-            </header>
-            <div className="vacancies__description">
-              <ul className="vacancies__list">
-                <li className="vacancies__item"><i className="icon icon-city" />General VR Solutions</li>
-                <li className="vacancies__item"><i className="icon icon-location" />Норвегия, Франфурт на Майне</li>
-              </ul>
-              <Text className="vacancies__text">Our trading platform is loaded with features. Our easy-to-use interface, quick funding...</Text>
-              <div className="vacancies__buttons">
-                <Button className="btn btn-read-more">
-                  {tShared("readMore")}
-                </Button>
+          {articles.map(article => (
+            <article className="vacancies__article" key={article.id}>
+              <header className="vacancies__header">
+                <picture className="vacancies__picture">
+                  <Image className="vacancies__image" src={article.src} alt={article.alt} width="37" height="37" />
+                </picture>
+                <Title className="vacancies__title" level={3}>{article.title}</Title>
+              </header>
+              <div className="vacancies__description">
+                <ul className="vacancies__list">
+                  <li className="vacancies__item">
+                    <i className="icon icon-city" />
+                    <Text className="vacancies__item-text">{article.list.city}</Text>
+                  </li>
+                  <li className="vacancies__item">
+                    <i className="icon icon-location" />
+                    <Text className="vacancies__item-text">{article.list.location}</Text>
+                  </li>
+                </ul>
+                <Text className="vacancies__text">{article.description}</Text>
+                <div className="vacancies__buttons">
+                  <Button className="button-read-more">
+                    {tShared("moreDetails")}
+                  </Button>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          ))}
         </section>
 
         <footer className="section__buttons">
-          <Button className="btn btn-find-more">
-            {t("vacancies.button")}
+          <Button className="button-find-more">
+            <Text>{t("vacancies.button")}</Text>
           </Button>
         </footer>
       </div>

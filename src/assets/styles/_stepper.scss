@@ -1,0 +1,21 @@
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.stepper__step {
+  background-color: var(--blue_30);
+  border-radius: 50%;
+  box-shadow: 0 0 0px 2px var(--white_0);
+  cursor: pointer;
+  display: block;
+  width: 5px;
+  height: 5px;
+  transition: .3s;
+}
+.stepper__step--active {
+  background-color: var(--blue);
+  box-shadow: 0 0 0px 2px var(--blue);
+  cursor: default ;
+}

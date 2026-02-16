@@ -1,15 +1,48 @@
 "use client";
 import Image from "next/image";
+import { useState } from 'react';
 import { useTranslations } from "next-intl";
 
-// import image_1_SRC from "@/../public/images/image_1.png";
+import image_1_SRC from "@/../public/images/image_1.png";
 import image_2_SRC from "@/../public/images/image_2.png";
-// import image_3_SRC from "@/../public/images/image_3.png";
+import image_3_SRC from "@/../public/images/image_3.png";
 import Button from "@/views/shared/antd/Button";
 import { Title, Text } from "@/views/shared/antd/Typography";
+import Stepper from "@/views/shared/Stepper";
+
+const articles = [{
+  id: "1",
+  title: "Топ 5 профессий на релокейт или как найти",
+  description: "Регистрация в Bürgeramt у меня была в таком виде так: я нашел адрес районного",
+  src: image_1_SRC,
+  srcAlt: "Photo",
+  time: "12 мин",
+  link: "#",
+},
+{
+  id: "2",
+  title: "Топ 5 профессий на релокейт или как найти",
+  description: "Регистрация в Bürgeramt у меня была в таком виде так: я нашел адрес районного",
+  src: image_2_SRC,
+  srcAlt: "Photo",
+  time: "12 мин",
+  link: "#",
+},
+{
+  id: "3",
+  title: "Топ 5 профессий на релокейт или как найти",
+  description: "Регистрация в Bürgeramt у меня была в таком виде так: я нашел адрес районного",
+  src: image_3_SRC,
+  srcAlt: "Photo",
+  time: "12 мин",
+  link: "#",
+}];
 
 const SectionBlog = () => {
   const t = useTranslations("Home");
+  const tShared = useTranslations("shared");
+  const [activeStep, setActiveStep] = useState(articles[0].id);
+  const steps = articles.map(article => article.id);
 
   return (
     <section className="section section--blog">
@@ -24,34 +57,31 @@ const SectionBlog = () => {
         </header>
 
         <section className="blog">
-          <article className="blog__article">
-            <picture className="vacancies__picture">
-              <Image className="vacancies__image" src={image_2_SRC} alt="Photo" width="330" height="140" />
-            </picture>
-            <div className="blog__wrapper">
-              <header className="blog__header">
-                <Text className="blog__text">{t("blog.experience")}</Text>
-                <i className="icon icon-mark" />
-              </header>
-              <div className="blog__content">
-                <Title className="blog__title" level={3}>Топ 5 профессий на релокейт или как найти</Title>
-                <Text className="blog__text">Регистрация в Bürgeramt у меня была в таком виде так: я нашел адрес районного...</Text>
+          {articles.map(article => (
+            <article className="blog__article" key={article.id}>
+              <picture className="vacancies__picture">
+                <Image className="vacancies__image" src={article.src} alt={article.srcAlt} width="330" height="140" />
+              </picture>
+              <div className="blog__wrapper">
+                <header className="blog__header">
+                  <Text className="blog__text">{t("blog.experience")}</Text>
+                  <i className="icon icon-mark" />
+                </header>
+                <div className="blog__content">
+                  <Title className="blog__title" level={3}>{article.title}</Title>
+                  <Text className="blog__text">{article.description}</Text>
+                </div>
+                <footer>
+                  <Text className="blog__text">{article.description}</Text>
+                  <a className="blog__link" href={article.link}>
+                    <Text className="blog__text">{tShared("readMore")}</Text>
+                  </a>
+                </footer>
               </div>
-              <footer>
-                <Text className="blog__text">12 мин</Text>
-                <a className="blog__link" href="#">
-                  <Text className="blog__text">Читать далее</Text>
-                </a>
-              </footer>
-            </div>
-          </article>
-          
-          <div className="stepper">
-            <div className="stepper__step stepper__step--active" role="button" />
-            <div className="stepper__step" role="button" />
-            <div className="stepper__step" role="button" />
-            <div className="stepper__step" role="button" />
-          </div>
+            </article>
+          ))}
+
+          <Stepper steps={steps} activeStep={activeStep} setActiveStep={setActiveStep} />
         </section>
 
         <footer className="section__buttons">

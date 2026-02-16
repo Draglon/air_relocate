@@ -1,11 +1,76 @@
 "use client";
+import { useState } from 'react';
 import { useTranslations } from "next-intl";
 
 import Button from "@/views/shared/antd/Button";
 import { Title, Text } from "@/views/shared/antd/Typography";
+import Stepper from "@/views/shared/Stepper";
+
+const articles = [{
+  id: "1",
+  title: "С чего начать при переезде и подготовка",
+  nav: [{
+    link: "#",
+    text: "Поиск ваканчий по сервису",
+  },
+  {
+    link: "#",
+    text: "Горящие вакансии",
+  },
+  {
+    link: "#",
+    text: "Дорогостоящие вакансии",
+  },
+  {
+    link: "#",
+    text: "Дорогостоящие вакансии",
+  }],
+},
+{
+  id: "2",
+  title: "С чего начать при переезде и подготовка",
+  nav: [{
+    link: "#",
+    text: "Поиск ваканчий по сервису",
+  },
+  {
+    link: "#",
+    text: "Горящие вакансии<",
+  },
+  {
+    link: "#",
+    text: "Дорогостоящие вакансии",
+  },
+  {
+    link: "#",
+    text: "Дорогостоящие вакансии",
+  }],
+},
+{
+  id: "3",
+  title: "С чего начать при переезде и подготовка",
+  nav: [{
+    link: "#",
+    text: "Поиск ваканчий по сервису",
+  },
+  {
+    link: "#",
+    text: "Горящие вакансии",
+  },
+  {
+    link: "#",
+    text: "Дорогостоящие вакансии",
+  },
+  {
+    link: "#",
+    text: "Дорогостоящие вакансии",
+  }],
+}];
 
 const SectionRelocation = () => {
   const t = useTranslations("Home");
+  const [activeStep, setActiveStep] = useState(articles[0].id);
+  const steps = articles.map(article => article.id);
 
   return (
     <section className="section section--relocate">
@@ -20,21 +85,16 @@ const SectionRelocation = () => {
         </header>
 
         <section className="relocate">
-          <article className="relocate__article">
-            <Title className="relocate__title" level={3}>С чего начать при переезде и подготовка</Title>
-            <nav className="relocate__nav">
-              <a className="relocate__link" href="#">Поиск ваканчий по сервису</a>
-              <a className="relocate__link" href="#">Горящие вакансии</a>
-              <a className="relocate__link" href="#">Дорогостоящие вакансии</a>
-              <a className="relocate__link" href="#">Дорогостоящие вакансии</a>
-            </nav>
-          </article>
-          
-          <div className="stepper">
-            <div className="stepper__step stepper__step--active" role="button" />
-            <div className="stepper__step" role="button" />
-            <div className="stepper__step" role="button" />
-          </div>
+          {articles.map(article => (
+            <article className="relocate__article" key={article.id}>
+              <Title className="relocate__title" level={3}>{article.title}</Title>
+              <nav className="relocate__nav">
+                {article.nav.map((navLink, index) => <a className="relocate__link" href={navLink.link} key={index}>{navLink.text}</a>)}
+              </nav>
+            </article>
+          ))}
+
+          <Stepper steps={steps} activeStep={activeStep} setActiveStep={setActiveStep} />
         </section>
 
         <footer className="section__buttons">

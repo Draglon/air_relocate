@@ -1,6 +1,8 @@
 const shared = {
   "shared": {
-    "readMore": "Подробнее",
+    "readMore": "Читать далее",
+    "moreDetails": "Подробнее",
+    "readTheFullReview": "Читать полный отзыв",
   },
 };
 
