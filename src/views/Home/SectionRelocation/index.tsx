@@ -1,4 +1,5 @@
 "use client";
+import clsx from 'clsx';
 import { useState } from 'react';
 import { useTranslations } from "next-intl";
 
@@ -11,7 +12,7 @@ const articles = [{
   title: "С чего начать при переезде и подготовка",
   nav: [{
     link: "#",
-    text: "Поиск ваканчий по сервису",
+    text: "Поиск ваканчий по сервису 111",
   },
   {
     link: "#",
@@ -31,11 +32,11 @@ const articles = [{
   title: "С чего начать при переезде и подготовка",
   nav: [{
     link: "#",
-    text: "Поиск ваканчий по сервису",
+    text: "Поиск ваканчий по сервису 222",
   },
   {
     link: "#",
-    text: "Горящие вакансии<",
+    text: "Горящие вакансии",
   },
   {
     link: "#",
@@ -51,7 +52,7 @@ const articles = [{
   title: "С чего начать при переезде и подготовка",
   nav: [{
     link: "#",
-    text: "Поиск ваканчий по сервису",
+    text: "Поиск ваканчий по сервису 333",
   },
   {
     link: "#",
@@ -73,33 +74,42 @@ const SectionRelocation = () => {
   const steps = articles.map(article => article.id);
 
   return (
-    <section className="section section--relocate">
+    <section className="section section--relocation">
       <div className="section__wrapper">
         <header className="section__header">
           <Title className="section__title" level={1}>
             {t("relocation.title")}
           </Title>
-          <Text className="section__description">
-            {t("relocation.description")}
-          </Text>
+          <div className='section__description text-center'>
+            <Text className="section__text">
+              {t("relocation.description")}
+            </Text>
+          </div>
         </header>
 
-        <section className="relocate">
-          {articles.map(article => (
-            <article className="relocate__article" key={article.id}>
-              <Title className="relocate__title" level={3}>{article.title}</Title>
-              <nav className="relocate__nav">
-                {article.nav.map((navLink, index) => <a className="relocate__link" href={navLink.link} key={index}>{navLink.text}</a>)}
-              </nav>
-            </article>
-          ))}
+        <section className="relocation">
+          <div className="relocation__wrapper">
+            {articles.map(article => (
+              <article
+                key={article.id}
+                className={clsx("relocation__article", {
+                  "relocation__article--active": activeStep === article.id
+                })}
+              >
+                <Title className="relocation__title" level={3}>{article.title}</Title>
+                <nav className="relocation__nav">
+                  {article.nav.map((navLink, index) => <a className="relocation__link" href={navLink.link} key={index}>{navLink.text}</a>)}
+                </nav>
+              </article>
+            ))}
+          </div>
 
           <Stepper steps={steps} activeStep={activeStep} setActiveStep={setActiveStep} />
         </section>
 
         <footer className="section__buttons">
-          <Button className="btn btn-find-more">
-            {t("relocation.button")}
+          <Button className="button-find-more">
+            <Text>{t("relocation.button")}</Text>
           </Button>
         </footer>
       </div>

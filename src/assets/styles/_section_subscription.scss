@@ -1,3 +1,55 @@
 .section--subscription {
-  
+  background-color: var(--blue);
+  .section__wrapper {}
+  .section__header {}
+  .section__title {
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.26;
+    @media (min-width: 900px) {
+      font-size: 30px;
+      line-height: 1.26;
+    }
+    @media (min-width: 1280px) {
+      font-size: 29px;
+    }
+    @media (min-width: 1920px) {
+      font-size: 31px;
+      line-height: 1;
+    }
+  }
+  .section__description {
+    
+  }
+  .section__text {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.48;
+    @media (min-width: 1280px) {
+      font-size: 16px;
+      line-height: 1.18;
+    }
+  }
+  .subscription__form {}
+  .subscription__field {}
+  .subscription__button {
+    .button-submit {
+      background-color: var(--yellow);
+      border-radius: 5px;
+      width: 169px;
+      height: 54px;
+      &:hover, &:focus {
+        background-color: var(--yellow);
+      }
+      .text {
+        color: #292828;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.18;
+        text-transform: uppercase;
+      }
+    }
+  }
 }

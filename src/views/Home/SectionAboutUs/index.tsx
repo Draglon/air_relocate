@@ -1,4 +1,5 @@
 "use client";
+import clsx from 'clsx';
 import Image from "next/image";
 import { useState } from 'react';
 import { useTranslations } from "next-intl";
@@ -49,7 +50,12 @@ const SectionAboutUs = () => {
 
         <section className="about-us">
           {articles.map(article => (
-            <article className="about-us__article" key={article.id}>
+            <article
+              key={article.id}
+              className={clsx("about-us__article", {
+                "about-us__article--active": activeStep === article.id
+              })}
+            >
               <header className="about-us__header">
                 <picture className="about-us__picture">
                   <Image className="about-us__image" src={article.avatarSRC} alt={article.title} width="37" height="37" />
@@ -63,8 +69,8 @@ const SectionAboutUs = () => {
               </div>
 
               <footer className="about-us__buttons">
-                <Button className="btn btn-read-more">
-                  {tShared("readTheFullReview")}
+                <Button className="button-read-more">
+                  <Text>{tShared("readTheFullReview")}</Text>
                 </Button>
               </footer>
             </article>
@@ -74,8 +80,8 @@ const SectionAboutUs = () => {
         </section>
 
         <footer className="section__buttons">
-          <Button className="btn btn-find-more">
-            {t("aboutUs.button")}
+          <Button className="button-find-more">
+            <Text>{t("aboutUs.button")}</Text>
           </Button>
         </footer>
       </div>

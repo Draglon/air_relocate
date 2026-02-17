@@ -1,4 +1,5 @@
 "use client";
+import clsx from 'clsx';
 import Image from "next/image";
 import { useState } from 'react';
 import { useTranslations } from "next-intl";
@@ -14,18 +15,21 @@ const articles = [{
   title: "Лондон",
   description: "785 открытых вакансий",
   src: bridgeSRC,
+  alt: "City"
 },
 {
   id: "2",
   title: "Лондон",
   description: "785 открытых вакансий",
   src: bridgeSRC,
+  alt: "City"
 },
 {
   id: "3",
   title: "Лондон",
   description: "785 открытых вакансий",
   src: bridgeSRC,
+  alt: "City"
 }];
 
 const SectionCities = () => {
@@ -41,34 +45,43 @@ const SectionCities = () => {
           <Title className="section__title" level={1}>
             {t("cities.title")}
           </Title>
-          <Text className="section__description">
-            {t("cities.description")}
-          </Text>
+          <div className='section__description text-center'>
+            <Text className="section__text">
+              {t("cities.description")}
+            </Text>
+          </div>
         </header>
 
         <section className="cities">
-          {articles.map(article => (
-            <article className="cities__article" key={article.id}>
-              <picture className="cities__picture">
-                <Image className="cities__image" src={article.src} alt="City" width="37" height="37" />
-              </picture>
-              <Title className="cities__title" level={3}>{article.title}</Title>
-              <Text className="cities__text">{article.description}</Text>
+          <div className='cities__wrapper'>
+            {articles.map(article => (
+              <article
+                key={article.id}
+                className={clsx("cities__article", {
+                  "cities__article--active": activeStep === article.id
+                })}
+              >
+                <picture className="cities__picture">
+                  <Image className="cities__image" src={article.src} alt={article.alt} width="37" height="37" />
+                </picture>
+                <Title className="cities__title" level={3}>{article.title}</Title>
+                <Text className="cities__text">{article.description}</Text>
 
-              <div className="cities__buttons">
-                <Button className="btn btn-read-more">
-                  {tShared("readMore")}
-                </Button>
-              </div>
-            </article>
-          ))}
+                <div className="cities__buttons">
+                  <Button className="button-read-more">
+                    {tShared("moreDetails")}
+                  </Button>
+                </div>
+              </article>
+            ))}
+          </div>
 
           <Stepper steps={steps} activeStep={activeStep} setActiveStep={setActiveStep} />
         </section>
 
         <footer className="section__buttons">
-          <Button className="btn btn-find-more">
-            {t("vacancies.button")}
+          <Button className="button-find-more">
+            <Text>{t("vacancies.button")}</Text>
           </Button>
         </footer>
       </div>

@@ -101,29 +101,6 @@
       }
     }
   }
-
-  .button-find-more {
-    background-color: var(--white_0);
-    border: 1px solid #817BEC;
-    border-radius: 2px;
-    min-width: 252px;
-    height: 52px;
-    &:hover, &:focus, &:active {
-      background-color: var(--white_0);
-      border: 1px solid #817BEC;
-    }
-    .text {
-      color: #4132E5;
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 1.18;
-      @media (min-width: 900px) {
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 1.18;
-      }
-    }
-  }
 }
 
 .vacancies {

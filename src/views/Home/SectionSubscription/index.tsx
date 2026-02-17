@@ -15,9 +15,11 @@ const SectionSubscription = () => {
           <Title className="section__title" level={1}>
             {t("subscription.title")}
           </Title>
-          <Text className="section__description">
-            {t("subscription.description")}
-          </Text>
+          <div className='section__description text-center'>
+            <Text className="section__text">
+              {t("subscription.description")}
+            </Text>
+          </div>
         </header>
 
         <form className="subscription__form">
@@ -25,8 +27,8 @@ const SectionSubscription = () => {
             <Input placeholder={t("subscription.form.email.placeholder")} />
           </div>
           <div className="subscription__button">
-            <Button className="btn btn-subscription">
-              {t("vacancies.button")}
+            <Button className="button-submit">
+              <Text>{t("subscription.form.button")}</Text>
             </Button>
           </div>
           <div className="subscription__field">

@@ -1,4 +1,5 @@
 "use client";
+import clsx from 'clsx';
 import Image from "next/image";
 import { useState } from 'react';
 import { useTranslations } from "next-intl";
@@ -51,30 +52,37 @@ const SectionBlog = () => {
           <Title className="section__title" level={1}>
             {t("blog.title")}
           </Title>
+        <div className='section__description text-center'>
           <Text className="section__description">
             {t("blog.description")}
           </Text>
+        </div>
         </header>
 
         <section className="blog">
           {articles.map(article => (
-            <article className="blog__article" key={article.id}>
-              <picture className="vacancies__picture">
-                <Image className="vacancies__image" src={article.src} alt={article.srcAlt} width="330" height="140" />
+              <article
+                key={article.id}
+                className={clsx("blog__article", {
+                  "blog__article--active": activeStep === article.id
+                })}
+              >
+              <picture className="blog__picture">
+                <Image className="blog__image" src={article.src} alt={article.srcAlt} width="330" height="140" />
               </picture>
               <div className="blog__wrapper">
                 <header className="blog__header">
-                  <Text className="blog__text">{t("blog.experience")}</Text>
+                  <Text className="blog__text" fontFamily="roboto">{t("blog.experience")}</Text>
                   <i className="icon icon-mark" />
                 </header>
                 <div className="blog__content">
                   <Title className="blog__title" level={3}>{article.title}</Title>
                   <Text className="blog__text">{article.description}</Text>
                 </div>
-                <footer>
-                  <Text className="blog__text">{article.description}</Text>
+                <footer className="blog__footer">
+                  <Text className="blog__text" fontFamily="roboto">{article.description}</Text>
                   <a className="blog__link" href={article.link}>
-                    <Text className="blog__text">{tShared("readMore")}</Text>
+                    <Text>{tShared("readMore")}</Text>
                   </a>
                 </footer>
               </div>
@@ -85,8 +93,8 @@ const SectionBlog = () => {
         </section>
 
         <footer className="section__buttons">
-          <Button className="btn btn-find-more">
-            {t("blog.button")}
+          <Button className="button-find-more">
+            <Text>{t("blog.button")}</Text>
           </Button>
         </footer>
       </div>

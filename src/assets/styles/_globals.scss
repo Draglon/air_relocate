@@ -16,8 +16,23 @@ ul {
   list-style-type: none;
 }
 
-.title, .text {
-  font-family: Geometria, sans-serif !important;
+.title {
+  &:not(.text--roboto) {
+    font-family: Geometria, sans-serif !important;
+  }
+
+  &--roboto {
+    font-family: Roboto, sans-serif !important;
+  }
+}
+
+.text {
+  &:not(.text--roboto) {
+    font-family: Geometria, sans-serif !important;
+  }
+  &--roboto {
+    font-family: Roboto, sans-serif !important;
+  }
 }
 
 .input {
