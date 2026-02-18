@@ -1,4 +1,5 @@
 "use client";
+import clsx from 'clsx';
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
@@ -9,35 +10,38 @@ import { Title, Text } from "@/views/shared/antd/Typography";
 const articles = [
   {
     id: "1",
+    hot: true,
     src: photoSRC,
     alt: "Photo alt",
-    title: "Senior Software Engineer (Full Stack)",
-    description: "Our trading platform is loaded with features. Our easy-to-use interface, quick funding",
+    title: "Senior Software Engineer (Full&nbsp;Stack)",
+    description: "Our trading platform is&nbsp;loaded with features. Our easy-to-use interface, quick funding",
     list: {
-      city: "General VR Solutions",
-      location: "Норвегия, Франфурт на Майне",
+      city: "General VR&nbsp;Solutions",
+      location: "Норвегия, Франфурт на&nbsp;Майне",
     },
   },
   {
     id: "2",
+    hot: false,
     src: photoSRC,
     alt: "Photo alt",
-    title: "Senior Software Engineer (Full Stack)",
-    description: "Our trading platform is loaded with features. Our easy-to-use interface, quick funding",
+    title: "Senior Software Engineer (Full&nbsp;Stack)",
+    description: "Our trading platform is&nbsp;loaded with features. Our easy-to-use interface, quick funding",
     list: {
-      city: "General VR Solutions",
-      location: "Норвегия, Франфурт на Майне",
+      city: "General VR&nbsp;Solutions",
+      location: "Норвегия, Франфурт на&nbsp;Майне",
     },
   },
   {
     id: "3",
+    hot: false,
     src: photoSRC,
     alt: "Photo alt",
-    title: "Senior Software Engineer (Full Stack)",
-    description: "Our trading platform is loaded with features. Our easy-to-use interface, quick funding",
+    title: "Senior Software Engineer (Full&nbsp;Stack)",
+    description: "Our trading platform is&nbsp;loaded with features. Our easy-to-use interface, quick funding",
     list: {
-      city: "General VR Solutions",
-      location: "Норвегия, Франфурт на Майне",
+      city: "General VR&nbsp;Solutions",
+      location: "Норвегия, Франфурт на&nbsp;Майне",
     },
   }
 ];
@@ -54,9 +58,7 @@ const SectionVacancies = () => {
             {t("vacancies.title")}
           </Title>
           <p className="section__description">
-            <Text className="section__text">
-              {t("vacancies.description")}
-            </Text>
+            <Text className="section__text" parseString={t("vacancies.description")} />
           </p>
         </header>
 
@@ -77,23 +79,24 @@ const SectionVacancies = () => {
                 <picture className="vacancies__picture">
                   <Image className="vacancies__image" src={article.src} alt={article.alt} width="37" height="37" />
                 </picture>
-                <Title className="vacancies__title" level={3}>{article.title}</Title>
+                <Title className="vacancies__title" level={3} parseString={article.title} />
+                <i className={clsx("icon", { "icon-mark": !article.hot, "icon-mark-full": article.hot })} />
               </header>
               <div className="vacancies__description">
                 <ul className="vacancies__list">
                   <li className="vacancies__item">
                     <i className="icon icon-city" />
-                    <Text className="vacancies__item-text">{article.list.city}</Text>
+                    <Text className="vacancies__item-text" fontFamily="roboto" parseString={article.list.city} />
                   </li>
                   <li className="vacancies__item">
                     <i className="icon icon-location" />
-                    <Text className="vacancies__item-text">{article.list.location}</Text>
+                    <Text className="vacancies__item-text" fontFamily="roboto" parseString={article.list.location} />
                   </li>
                 </ul>
-                <Text className="vacancies__text">{article.description}</Text>
+                <Text className="vacancies__text" parseString={article.description} />
                 <div className="vacancies__buttons">
-                  <Button className="button-read-more">
-                    {tShared("moreDetails")}
+                  <Button className={clsx("button-read-more", { "button-read-more--active": article.hot } )}>
+                    <Text fontFamily="roboto">{tShared("moreDetails")}</Text>
                   </Button>
                 </div>
               </div>

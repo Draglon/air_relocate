@@ -17,17 +17,16 @@ ul {
 }
 
 .title {
-  &:not(.text--roboto) {
+  &--geometria {
     font-family: Geometria, sans-serif !important;
   }
-
   &--roboto {
     font-family: Roboto, sans-serif !important;
   }
 }
 
 .text {
-  &:not(.text--roboto) {
+  &--geometria {
     font-family: Geometria, sans-serif !important;
   }
   &--roboto {

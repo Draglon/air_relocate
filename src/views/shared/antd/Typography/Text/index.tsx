@@ -1,20 +1,23 @@
 "use client";
 import clsx from "clsx";
+import parse from 'html-react-parser';
 import Text, { TextProps } from "antd/lib/typography/Text";
 
 const TypographyText = ({
   className,
-  fontFamily = '',
+  fontFamily = "geometria",
+  parseString,
   type,
   underline,
   italic,
   strong,
   children,
   ...rest
-}: TextProps & { fontFamily?: string }) => {
+}: TextProps & { fontFamily?: string; parseString?: string }) => {
   return (
     <Text
       className={clsx("text", className, {
+        "text--geometria": fontFamily === 'geometria',
         "text--roboto": fontFamily === 'roboto',
       })}
       type={type}
@@ -23,7 +26,7 @@ const TypographyText = ({
       underline={underline}
       {...rest}
     >
-      {children}
+      {parseString ? parse(parseString) : children}
     </Text>
   );
 };
