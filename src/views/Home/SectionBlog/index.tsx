@@ -49,13 +49,9 @@ const SectionBlog = () => {
     <section className="section section--blog">
       <div className="section__wrapper">
         <header className="section__header">
-          <Title className="section__title" level={1}>
-            {t("blog.title")}
-          </Title>
+          <Title className="section__title" level={1} parseString={t("blog.title")} />
         <div className='section__description text-center'>
-          <Text className="section__description">
-            {t("blog.description")}
-          </Text>
+          <Text className="section__description" parseString={t("blog.description")} />
         </div>
         </header>
 

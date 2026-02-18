@@ -12,13 +12,9 @@ const SectionSubscription = () => {
     <section className="section section--subscription">
       <div className="section__wrapper">
         <header className="section__header">
-          <Title className="section__title" level={1}>
-            {t("subscription.title")}
-          </Title>
+          <Title className="section__title" level={1} parseString={t("subscription.title")} />
           <div className='section__description text-center'>
-            <Text className="section__text">
-              {t("subscription.description")}
-            </Text>
+            <Text className="section__text" parseString={t("subscription.description")} />
           </div>
         </header>
 

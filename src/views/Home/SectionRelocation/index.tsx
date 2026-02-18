@@ -77,13 +77,9 @@ const SectionRelocation = () => {
     <section className="section section--relocation">
       <div className="section__wrapper">
         <header className="section__header">
-          <Title className="section__title" level={1}>
-            {t("relocation.title")}
-          </Title>
+          <Title className="section__title" level={1} parseString={t("relocation.title")} />
           <div className='section__description text-center'>
-            <Text className="section__text">
-              {t("relocation.description")}
-            </Text>
+            <Text className="section__text" parseString={t("relocation.description")} />
           </div>
         </header>
 

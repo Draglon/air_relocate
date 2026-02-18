@@ -8,7 +8,7 @@ const home = {
       "part_1": "Найди вакансию",
       "part_2": "и город своей мечты",
     },
-    "subTitle": "Как подготовить себя и семью к переезду, что нужно знать о жизни в новом городе, как подготовится к собеседованию",
+    "subTitle": "Как подготовить себя и&nbsp;семью к&nbsp;переезду, что нужно знать о&nbsp;жизни в&nbsp;новом городе, как подготовится к&nbsp;собеседованию",
     "form": {
       "vacancy": {
         "placeholder": "Вакансия"
@@ -27,13 +27,13 @@ const home = {
       "button": "Найти больше вакансий",
     },
     "cities": {
-      "title": "Узнай все о городе своей мечты",
-      "description": "Как подготовить себя и семью к переезду, что нужно знать о жизни в новом городе, как подготовится к собеседованию",
+      "title": "Узнай все о&nbsp;городе своей мечты",
+      "description": "Как подготовить себя и&nbsp;семью к&nbsp;переезду, что нужно знать о&nbsp;жизни в&nbsp;новом городе, как подготовится к&nbsp;собеседованию",
       "button": "Все города",
     },
     "relocation": {
-      "title": "Всё о релокейте",
-      "description": "Как подготовить себя и семью к переезду, что нужно знать о жизни в новом городе, как подготовится к собеседованию",
+      "title": "Всё о&nbsp;релокейте",
+      "description": "Как подготовить себя и&nbsp;семью к&nbsp;переезду, что нужно знать о&nbsp;жизни в&nbsp;новом городе, как подготовится к&nbsp;собеседованию",
       "button": "Узнать больше",
     },
     "blog": {
@@ -41,33 +41,33 @@ const home = {
       "description": "Наши эксперты помогут вам своими лучшими статьями",
       "button": "Читать все статьи",
       "readMore": "Читать далее",
-      "experience": "опыт",
-      "inspiration": "вдохновение",
+      "experience": "Опыт",
+      "inspiration": "Вдохновение",
       "time": "12 мин",
       "article": {
-        "title": "Топ 5 профессий на релокейт или как найти",
-        "description": "Регистрация в Bürgeramt у меня была в таком виде так: я нашел адрес...",
+        "title": "Топ 5&nbsp;профессий на&nbsp;релокейт или как найти",
+        "description": "Регистрация в&nbsp;Bürgeramt у&nbsp;меня была в&nbsp;таком виде так: я&nbsp;нашел адрес",
       }
     },
     "subscription": {
-      "title": "Хочешь получать лучшие статьи от Aitrelocate раз в неделю?",
-      "description": "Подпишись на рассылку Aitrelocate",
+      "title": "Хочешь получать лучшие статьи от&nbsp;Aitrelocate раз в&nbsp;неделю?",
+      "description": "Подпишись на&nbsp;рассылку Aitrelocate",
       "form": {
         "email": {
           "placeholder": "Email",
         },
         "agree": {
-          "label": "Я согласен с условиями обработкиперсональных данных",
+          "label": "Я&nbsp;согласен с&nbsp;условиями обработкиперсональных данных",
         },
         "button": "Подписаться",
       }
     },
     "aboutUs": {
-      "title": "Что о нас говорят",
+      "title": "Что о&nbsp;нас говорят",
       "article": {
         "author": "Сергей Серцеед",
         "position": "QA engeneer",
-        "description": "What I like about Relocate is that you get carefully selected jobs in different countries. What’s more, all the potential employers are ready to help you with relocation",
+        "description": "What I&nbsp;like about Relocate is&nbsp;that you get carefully selected jobs in&nbsp;different countries. What’s more, all the potential employers are ready to&nbsp;help you with relocation",
         "readMore": "Читать полный отзыв"
       },
       "button": "Читать все отзывы"

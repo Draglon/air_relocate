@@ -21,9 +21,7 @@ const SectionMain = () => {
             {t("title.part_2")}
           </span>
         </Title>
-        <Title className="section__subTitle" level={2}>
-          {t("subTitle")}
-        </Title>
+        <Title className="section__subTitle" level={2} parseString={t("subTitle")} />
         <form className="section__form">
           <div className="section__field">
             <Input className="section__input" placeholder={t("form.vacancy.placeholder")} />

@@ -43,9 +43,7 @@ const SectionAboutUs = () => {
     <section className="section section--about-us">
       <div className="section__wrapper">
         <header className="section__header">
-          <Title className="section__title" level={1}>
-            {t("aboutUs.title")}
-          </Title>
+          <Title className="section__title" level={1} parseString={t("aboutUs.title")} />
         </header>
 
         <section className="about-us">
@@ -65,7 +63,7 @@ const SectionAboutUs = () => {
               </header>
 
               <div className="about-us__description">
-                <Text className="about-us__text">{article.description}</Text>
+                <Text className="about-us__text" parseString={article.description} />
               </div>
 
               <footer className="about-us__buttons">
