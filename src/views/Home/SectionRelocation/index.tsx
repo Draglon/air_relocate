@@ -4,15 +4,16 @@ import { useState } from 'react';
 import { useTranslations } from "next-intl";
 
 import Button from "@/views/shared/antd/Button";
-import { Title, Text } from "@/views/shared/antd/Typography";
+import { Title, Text, Paragraph } from "@/views/shared/antd/Typography";
 import Stepper from "@/views/shared/Stepper";
+import NavigationLink from "@/views/shared/NavigationLink";
 
 const articles = [{
   id: "1",
   title: "С чего начать при переезде и подготовка",
   nav: [{
     link: "#",
-    text: "Поиск ваканчий по сервису 111",
+    text: "Поиск ваканчий по сервису",
   },
   {
     link: "#",
@@ -32,7 +33,7 @@ const articles = [{
   title: "С чего начать при переезде и подготовка",
   nav: [{
     link: "#",
-    text: "Поиск ваканчий по сервису 222",
+    text: "Поиск ваканчий по сервису",
   },
   {
     link: "#",
@@ -52,7 +53,7 @@ const articles = [{
   title: "С чего начать при переезде и подготовка",
   nav: [{
     link: "#",
-    text: "Поиск ваканчий по сервису 333",
+    text: "Поиск ваканчий по сервису",
   },
   {
     link: "#",
@@ -78,9 +79,7 @@ const SectionRelocation = () => {
       <div className="section__wrapper">
         <header className="section__header">
           <Title className="section__title" level={1} parseString={t("relocation.title")} />
-          <div className='section__description text-center'>
-            <Text className="section__text" parseString={t("relocation.description")} />
-          </div>
+          <Paragraph className='section__description' parseString={t("relocation.description")} />
         </header>
 
         <section className="relocation">
@@ -94,7 +93,11 @@ const SectionRelocation = () => {
               >
                 <Title className="relocation__title" level={3}>{article.title}</Title>
                 <nav className="relocation__nav">
-                  {article.nav.map((navLink, index) => <a className="relocation__link" href={navLink.link} key={index}>{navLink.text}</a>)}
+                  {article.nav.map((navLink, index) => (
+                    <NavigationLink className="relocation__nav-link truncate" href={navLink.link} key={index}>
+                      {navLink.text}
+                    </NavigationLink>
+                  ))}
                 </nav>
               </article>
             ))}

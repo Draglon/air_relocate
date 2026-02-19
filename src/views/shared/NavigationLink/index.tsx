@@ -9,8 +9,9 @@ const NavigationLink = ({
   href,
   children,
   className,
+  fontFamily = "geometria",
   ...rest
-}: LinkProps & { children: ReactNode; className?: string }) => {
+}: LinkProps & { children: ReactNode; className?: string, fontFamily?: string }) => {
   const pathname = usePathname();
   const isActive = pathname === href;
 
@@ -18,7 +19,11 @@ const NavigationLink = ({
     // @ts-ignore
     <Link
       aria-current={isActive ? "page" : undefined}
-      className={clsx(className, isActive && "active")}
+      className={clsx("link", {
+        "active": isActive,
+        "link--geometria": fontFamily === 'geometria',
+        "link--roboto": fontFamily === 'roboto',
+      }, className)}
       href={href}
       {...rest}
     >

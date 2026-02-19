@@ -16,7 +16,6 @@ const TypographyParagraph = ({
 }: ParagraphProps & { fontFamily?: string; parseString?: string }) => {
   return (
     <Paragraph
-      // className={clsx("paragraph", className)}
       className={clsx("paragraph", className, {
         "paragraph--geometria": fontFamily === 'geometria',
         "paragraph--roboto": fontFamily === 'roboto',

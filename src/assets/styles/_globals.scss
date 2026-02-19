@@ -43,6 +43,15 @@ ul {
   }
 }
 
+.link {
+  &--geometria {
+    font-family: Geometria, sans-serif !important;
+  }
+  &--roboto {
+    font-family: Roboto, sans-serif !important;
+  }
+}
+
 .input {
   width: 100%;
 
