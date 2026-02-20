@@ -3,7 +3,8 @@ import { useTranslations } from "next-intl";
 
 import Button from "@/views/shared/antd/Button";
 import Input from "@/views/shared/antd/Input";
-import { Title, Text } from "@/views/shared/antd/Typography";
+import Checkbox from "@/views/shared/antd/Checkbox";
+import { Title, Text, Paragraph } from "@/views/shared/antd/Typography";
 
 const SectionSubscription = () => {
   const t = useTranslations("Home");
@@ -13,9 +14,7 @@ const SectionSubscription = () => {
       <div className="section__wrapper">
         <header className="section__header">
           <Title className="section__title" level={1} parseString={t("subscription.title")} />
-          <div className='section__description text-center'>
-            <Text className="section__text" parseString={t("subscription.description")} />
-          </div>
+          <Paragraph className='section__description' parseString={t("subscription.description")} />
         </header>
 
         <form className="subscription__form">
@@ -28,7 +27,9 @@ const SectionSubscription = () => {
             </Button>
           </div>
           <div className="subscription__field">
-            add checkbox
+            <Checkbox>
+              <Text parseString={t("subscription.form.agree.label")} />
+            </Checkbox>
           </div>
         </form>
       </div>
