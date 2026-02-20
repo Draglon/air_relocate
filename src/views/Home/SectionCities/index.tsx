@@ -75,7 +75,7 @@ const SectionCities = () => {
         </section>
 
         <footer className="section__buttons">
-          <Button className="button-find-more">
+          <Button className="button-find-more" color="primary" variant="outlined">
             <Text>{t("cities.button")}</Text>
           </Button>
         </footer>

@@ -1,32 +1,32 @@
 .section--blog {
+  padding-top: 60px;
   padding-bottom: 60px;
   .section__wrapper {
     padding: 0 15px;
   }
   .section__header {
-
+    padding-bottom: 8px;
   }
   .section__title {
     font-size: 26px;
     font-weight: 700;
     line-height: 1;
+    text-indent: 1px;
     text-align: center;
-    margin: 0 auto;
-    max-width: 300px;
+    margin-bottom: 10px !important;
     @media (min-width: 900px) {
       font-size: 30px;
     }
   }
   .section__description {
-
-  }
-  .section__text {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.45;
     display: block;
     margin: 0 auto;
     max-width: 252px;
+    text-align: center;
+    margin-bottom: 13px !important;
     @media (min-width: 1280px) {
       font-size: 16px;
     }
@@ -39,8 +39,12 @@
 }
 
 .blog {
+  padding-bottom: 29px;
+  .blog__wrapper {
+    padding-bottom: 21px;
+  }
   .blog__article {
-    box-shadow: 0 4px 22px 0 var(--black_12);
+    box-shadow: 0 4px 13px 0 var(--black_12);
     border-radius: 5px;
     display: none;
     &--active {
@@ -48,17 +52,24 @@
     }
   }
   .blog__picture {
-
+    display: block;
   }
   .blog__image {
-
+    display: block;
+    width: 100%;
   }
-  .blog__wrapper {
-
+  .blog__content {
+    padding: 17px 25px 23px 28px;
   }
   .blog__header {
+    padding-bottom: 11px;
+    position: relative;
     .icon-mark {
-
+      color: #A5A5A5;
+      font-size: 19px;
+      position: absolute;
+      top: 1px;
+      right: 0;
     }
     .blog__text {
       color: #323232;
@@ -74,12 +85,14 @@
       }
     }
   }
-  .blog__content {
+  .blog__description {
     .blog__title {
       color: #4132E5;
       font-size: 16px;
       font-weight: 700;
-      line-height: 1;
+      line-height: 1.32;
+      margin-bottom: 14px;
+      padding-left: 1px;
       @media (min-width: 1920px) {
         font-size: 18px;
       }
@@ -88,7 +101,9 @@
       color: #292828;
       font-size: 12px;
       font-weight: 400;
-      line-height: 1.38;
+      line-height: 1.4;
+      margin-bottom: 20px;
+      padding-left: 1px;
       @media (min-width: 1920px) {
         font-size: 14px;
         line-height: 1.1;
@@ -96,13 +111,17 @@
     }
   }
   .blog__footer {
+    display: flex;
+    justify-content: space-between;
     .blog__text {
       color: #AEAEAE;
       font-size: 12px;
       font-weight: 400;
       line-height: 1.76;
+      text-indent: 1px;
     }
     .blog__link {
+      margin-right: 1px;
       text-decoration: none;
       .text {
         color: var(--blue);

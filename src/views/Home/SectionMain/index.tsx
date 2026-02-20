@@ -30,7 +30,7 @@ const SectionMain = () => {
             <Select className="section__select" placeholder={t("form.city.placeholder")} />
           </div>
           <div className="section__buttons">
-            <Button className="btn-search" htmlType="submit">
+            <Button className="btn-search" htmlType="submit" color="primary" variant="solid">
               <i className="icon icon-search" />
             </Button>
           </div>

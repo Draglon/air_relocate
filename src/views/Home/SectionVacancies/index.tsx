@@ -95,7 +95,7 @@ const SectionVacancies = () => {
                 </ul>
                 <Text className="vacancies__text" parseString={article.description} />
                 <div className="vacancies__buttons">
-                  <Button className={clsx("button-read-more", { "button-read-more--active": article.hot } )}>
+                  <Button className="button-read-more" color="primary" variant={article.hot ? "solid" : "outlined" }>
                     <Text fontFamily="roboto">{tShared("moreDetails")}</Text>
                   </Button>
                 </div>

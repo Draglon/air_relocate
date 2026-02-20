@@ -226,24 +226,11 @@
     padding-top: 24px;
     text-align: right;
     .button-read-more {
-      background-color: var(--white_0);
-      border: 1px solid #3F3CE3;
       border-radius: 2px;
       padding: 0 10px;
       min-width: 96px;
       height: 28px;
       line-height: 28px;
-      &:hover, &:focus, &:active {
-        background-color: var(--white_0);
-        border: 1px solid #3F3CE3;
-      }
-      &--active {
-        background-color: #3F3CE3;
-        border: 1px solid #3F3CE3;
-        span {
-          color: var(--white) !important;
-        }
-      }
       span {
         color: #4132E5;
         font-weight: 700;

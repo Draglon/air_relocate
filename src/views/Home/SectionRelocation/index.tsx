@@ -107,7 +107,7 @@ const SectionRelocation = () => {
         </section>
 
         <footer className="section__buttons">
-          <Button className="button-find-more">
+          <Button className="button-find-more" color="primary" variant="outlined">
             <Text>{t("relocation.button")}</Text>
           </Button>
         </footer>

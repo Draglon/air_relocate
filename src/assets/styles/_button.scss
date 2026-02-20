@@ -1,40 +1,70 @@
-.button--primary {
-  background-color: var(--button-primary-bg-color);
-  &:hover, &:focus {
-    background-color: var(--button-primary-bg-color-hover);
+.ant-btn {
+  // primary
+  &.ant-btn-color-primary {
+    &.ant-btn-variant-solid {
+      background-color: var(--button-primary-solid-bg-color);
+      border: 1px solid #3F3CE3;
+      &:hover, &:focus {
+        background-color: var(--button-primary-solid-bg-color-hover);
+        border: 1px solid #3F3CE3;
+      }
+      .text {
+        color: var(--button-primary-solid-color);
+      }
+    }
+
+    &.ant-btn-variant-outlined {
+      background-color: var(--button-primary-outlined-bg-color);
+      border: 1px solid #3F3CE3;
+      &:hover, &:focus {
+        background-color: var(--button-primary-outlined-bg-color-hover);
+        border: 1px solid #3F3CE3;
+      }
+      .text {
+        color: var(--button-primary-outlined-color);
+      }
+    }
+
+    &.ant-btn-variant-link {
+      display: block;
+      padding: 0 !important;
+      height: auto;
+      &:hover, &:focus {
+        .text {
+          color: var(--button-primary-link-color-hover);
+        }
+      }
+      .text {
+        color: var(--button-primary-link-color);
+      }
+    }
   }
 
-  .text {
-    color: var(--button-primary-color);
-  }
-}
+  // default
+  &.ant-btn-color-default {
+    &.ant-btn-variant-solid {
+      background-color: var(--button-secondary-bg-color);
+      &:hover, &:focus {
+        background-color: var(--button-secondary-bg-color-hover);
+      }
 
-.button--secondary {
-  background-color: var(--button-secondary-bg-color);
-  &:hover, &:focus {
-    background-color: var(--button-secondary-bg-color-hover);
-  }
-
-  .text {
-    color: var(--button-secondary-color);
-  }
-}
-
-.button--warning {
-  background-color: var(--button-warning-bg-color);
-  &:hover, &:focus {
-    background-color: var(--button-warning-bg-color-hover);
+      .text {
+        color: var(--button-secondary-color);
+      }
+    }
   }
 
-  .text {
-    color: var(--button-warning-color);
-  }
-}
+  // warning
+  &.ant-btn-color-orange {
+    &.ant-btn-variant-solid {
+      background-color: var(--button-warning-bg-color);
+      &:hover, &:focus {
+        background-color: var(--button-warning-bg-color-hover);
+      }
 
-.button--danger {
-  background-color: var(--button-danger-bg-color);
-
-  &:hover, &:focus {
-    background-color: var(--button-danger-bg-color-hover);
+      .text {
+        color: var(--button-warning-color);
+      }
+    }
   }
 }

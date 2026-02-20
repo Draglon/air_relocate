@@ -23,7 +23,7 @@ const SectionSubscription = () => {
             <Input placeholder={t("subscription.form.email.placeholder")} />
           </div>
           <div className="subscription__button">
-            <Button className="button-submit">
+            <Button className="button-submit" color="primary" variant="solid">
               <Text>{t("subscription.form.button")}</Text>
             </Button>
           </div>

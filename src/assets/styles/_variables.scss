@@ -21,6 +21,7 @@
   --blue: #3F36E1;
   --blue_30: rgba(63, 54, 225, .3);
   --blue-dark: #3223CF;
+  --blue-light: #4132E5;
 
   --purple: #B76BFE;
 
@@ -35,9 +36,14 @@
   --primary-color: var(--blue);
   --primary-color-hover: var(--blue-dark);
 
-  --button-primary-bg-color: var(--primary-color);
-  --button-primary-bg-color-hover: var(--primary-color-hover);
-  --button-primary-color: var(--white);
+  --button-primary-solid-bg-color: var(--primary-color);
+  --button-primary-solid-bg-color-hover: var(--primary-color-hover);
+  --button-primary-solid-color: var(--white);
+  --button-primary-outlined-bg-color: var(--white);
+  --button-primary-outlined-bg-color-hover: var(--white);
+  --button-primary-outlined-color: var(--blue-light);
+  --button-primary-link-color: var(--blue-light);
+  --button-primary-link-color-hover: var(--blue);
 
   --button-secondary-bg-color: var(--white);
   --button-secondary-bg-color-hover: var(--white);
