@@ -4,6 +4,7 @@ import { Dispatch, SetStateAction, useState } from 'react';
 import { useTranslations } from "next-intl";
 
 import Button from "@/views/shared/antd/Button";
+import NavigationLink from "@/views/shared/NavigationLink";
 
 type MenuMobileProps = {
   active: boolean;
@@ -21,11 +22,11 @@ const MenuMobile = ({ active, setActiveMenu }: MenuMobileProps) => {
       </button>
 
       <nav className="menu-mobile__nav">
-        <a className="menu-mobile__nav-link" href="#">{t("mainMenu.home")}</a>
-        <a className="menu-mobile__nav-link" href="#">{t("mainMenu.vacancies")}</a>
-        <a className="menu-mobile__nav-link" href="#">{t("mainMenu.cities")}</a>
-        <a className="menu-mobile__nav-link" href="#">{t("mainMenu.relocation")}</a>
-        <a className="menu-mobile__nav-link" href="#">{t("mainMenu.blog")}</a>
+        <NavigationLink className="menu-mobile__nav-link" href="#">{t("mainMenu.home")}</NavigationLink>
+        <NavigationLink className="menu-mobile__nav-link" href="#">{t("mainMenu.vacancies")}</NavigationLink>
+        <NavigationLink className="menu-mobile__nav-link" href="#">{t("mainMenu.cities")}</NavigationLink>
+        <NavigationLink className="menu-mobile__nav-link" href="#">{t("mainMenu.relocation")}</NavigationLink>
+        <NavigationLink className="menu-mobile__nav-link" href="#">{t("mainMenu.blog")}</NavigationLink>
       </nav>
 
       <div className="menu-mobile__buttons">

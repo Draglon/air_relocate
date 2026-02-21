@@ -32,7 +32,7 @@
   background-color: var(--white);
   box-shadow: 0 4px 13px 0 var(--black_12);
   border-radius: 5px;
-  padding: 37px 30px;
+  padding: 37px 30px 35px;
   display: none;
   &--active {
     display: block;
@@ -76,6 +76,7 @@
   font-weight: 400;
   line-height: 1.76;
   -webkit-line-clamp: 4 !important;
+  margin-bottom: 23px !important;
   @media (min-width: 900px) {
     font-size: 13px;
     line-height: 1.4;
@@ -83,9 +84,11 @@
 }
 .about-us__buttons {
   .button-read-more {
-    color: #4132E5;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 1.4;
+    .text {
+      color: #4132E5;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.4;
+    }
   }
 }
