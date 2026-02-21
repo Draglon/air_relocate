@@ -1,5 +1,6 @@
 const footer = {
   "footer": {
+    "logoAlt": "Логотип Aitrelocare",
     "menu_1": {
       "title": "Aitrelocate",
       "item_1": "Блог",
