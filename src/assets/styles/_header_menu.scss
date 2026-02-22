@@ -13,10 +13,12 @@
     font-weight: 400;
     text-align: center;
     text-decoration: none;
+    text-shadow: 0 0 0 #292828;
+    transition: text-shadow .1s;
 
     &:hover {
       color: var(--blue);
-      font-weight: 700;
+      text-shadow: 0 0 1px var(--blue);
     }
 
     &:nth-child(2) {
