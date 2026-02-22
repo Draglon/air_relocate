@@ -26,3 +26,48 @@
     padding: 0 59px 0 64px;
   }
 }
+
+.header__left-side {
+  display: flex;
+  align-items: center;
+  padding-top: 19px;
+  .header__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding-left: 9px;
+    padding-right: 1px;
+    position: relative;
+    margin-left: 30px;
+    &:before {
+      content: '';
+      background-color: rgba(196, 196, 196, 0.4);
+      position: absolute;
+      top: 14px;
+      left: 0;
+      width: 1px;
+      height: 21px;
+    }
+    .button-clients {
+      border-radius: 3px;
+      min-width: 120px;
+      height: 45px;
+      .text {
+        font-size: 14px;
+        font-weight: 500;
+        text-indent: 4px;
+      }
+    }
+    .button-login {
+      border-radius: 3px;
+      min-width: 111px;
+      height: 45px;
+      .text {
+        font-size: 14px;
+        font-weight: 500;
+        text-indent: 4px;
+      }
+    }
+  }
+}
