@@ -2,6 +2,9 @@
   background-color: var(--grey-light);
   padding: 0 15px 30px;
   position: relative;
+  @media (min-width: 900px) {
+    padding: 0 68px 30px;
+  }
   &:before, &:after {
     content: '';
     position: absolute;
@@ -24,6 +27,17 @@
       url("/images/sm/bg-section-vacancies@1x.png") type("image/png") 1x,
       url("/images/sm/bg-section-vacancies@2x.png") type("image/png") 2x
     );
+    @media (min-width: 900px) {
+      background-image: url("/images/md/bg-section-vacancies@1x.png");
+      background-image: -webkit-image-set(
+        url("/images/md/bg-section-vacancies@1x.png") type("image/png") 1x,
+        url("/images/md/bg-section-vacancies@2x.png") type("image/png") 2x
+      );
+      background-image: image-set(
+        url("/images/md/bg-section-vacancies@1x.png") type("image/png") 1x,
+        url("/images/md/bg-section-vacancies@2x.png") type("image/png") 2x
+      );
+    }
   }
 
   .section__wrapper {
@@ -32,6 +46,9 @@
   }
   .section__header {
     padding-top: 54px;
+    @media (min-width: 900px) {
+      padding-top: 58px;
+    }
   }
   .section__title {
     color: var(--white);
@@ -40,11 +57,17 @@
     line-height: 1;
     text-align: center;
     text-indent: 1px;
-    margin-bottom:13px;
+    margin-bottom: 13px;
+    @media (min-width: 900px) {
+      margin-bottom: 15px;
+    }
   }
   .section__description {
     margin-bottom: 28px;
     text-align: center;
+    @media (min-width: 900px) {
+      margin-bottom: 35px;
+    }
   }
   .section__text {
     color: var(--white);
@@ -57,6 +80,8 @@
     @media (min-width: 900px) {
       font-size: 16px;
       line-height: 1.45;
+      max-width: inherit;
+      text-indent: 7px;
     }
     @media (min-width: 1920px) {
       font-size: 18px;
@@ -74,6 +99,10 @@
     justify-content: center;
     gap: 12px;
     margin-bottom: 18px;
+    @media (min-width: 900px) {
+      justify-content: flex-start;
+      margin-bottom: 25px;
+    }
 
     .button--tab {
       border-radius: 4px;
@@ -113,18 +142,40 @@
       }
     }
   }
+
+  .section__buttons {
+    @media (min-width: 900px) {
+      padding-left: 7px;
+    }
+    .button-find-more {
+      .text {
+        @media (min-width: 900px) {
+          font-size: 14px;
+          padding-top: 2px;
+          text-indent: 1px;
+        }
+      }
+    }
+  }
 }
 
 .vacancies {
   display: grid;
   gap: 14px;
   margin-bottom: 20px;
+  @media (min-width: 900px) {
+    gap: 20px;
+  }
   .vacancies__article {
     background-color: var(--white);
     border-radius: 4px;
     box-shadow: 0 4px 22px 0 var(--box-shadow);
     padding: 20px 21px 23px;
     position: relative;
+    @media (min-width: 900px) {
+      padding: 30px 24px 23px 21px;
+      min-height: 191px;
+    }
   }
   .vacancies__header {
     display: grid;
@@ -135,8 +186,14 @@
       position: absolute;
       top: 30px;
       right: 20px;
+      @media (min-width: 900px) {
+        right: 30px;
+      }
       &:before {
         font-size: 22px;
+        @media (min-width: 900px) {
+          font-size: 18px;
+        }
       }
       &.icon-mark {
         color: #C4C4C4;
@@ -164,6 +221,9 @@
     padding-top: 4px;
     padding-right: 25px;
     margin: 0;
+    @media (min-width: 900px) {
+      padding-top: 3px;
+    }
     @media (min-width: 1920px) {
       font-size: 16px;
       font-weight: 500;
@@ -175,9 +235,19 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 1.51;
+    @media (min-width: 900px) {
+      padding-left: 52px;
+    }
   }
   .vacancies__list {
     margin-bottom: 10px;
+    @media (min-width: 900px) {
+      display: flex;
+      gap: 22px;
+      margin-top: -13px;
+      margin-left: -2px;
+      margin-bottom: 18px;
+    }
   }
   .vacancies__item {
     display: flex;
@@ -217,6 +287,10 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 1.51;
+    @media (min-width: 900px) {
+      display: block;
+      max-width: 542px;
+    }
     @media (min-width: 1920px) {
       font-size: 13px;
       line-height: 1.2;
@@ -225,6 +299,9 @@
   .vacancies__buttons {
     padding-top: 24px;
     text-align: right;
+    @media (min-width: 900px) {
+      padding-top: 1px;
+    }
     .button-read-more {
       border-radius: 2px;
       padding: 0 10px;

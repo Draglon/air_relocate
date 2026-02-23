@@ -1,9 +1,13 @@
 .locale-switcher {
   background-color: var(--locale-switcher-bg-color);
+  display: none;
   font-size: 1em;
   font-weight: bold;
   padding: .5em .3em;
   height: 2em;
+  @media (min-width: 1280px) {
+    display: block;
+  }
 
   .ant-select-suffix {
     color: var(--text-color) !important;
