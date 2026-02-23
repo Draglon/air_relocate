@@ -1,5 +1,6 @@
 "use client";
 import clsx from "clsx";
+import parse from 'html-react-parser';
 import { ReactNode } from "react";
 import { LinkProps } from "next/link";
 
@@ -10,8 +11,9 @@ const NavigationLink = ({
   children,
   className,
   fontFamily = "geometria",
+  parseString,
   ...rest
-}: LinkProps & { children: ReactNode; className?: string, fontFamily?: string }) => {
+}: LinkProps & { children?: ReactNode; className?: string, fontFamily?: string, parseString?: string }) => {
   const pathname = usePathname();
   const isActive = pathname === href;
 
@@ -27,7 +29,7 @@ const NavigationLink = ({
       href={href}
       {...rest}
     >
-      {children}
+      {parseString ? parse(parseString) : children}
     </Link>
   );
 };

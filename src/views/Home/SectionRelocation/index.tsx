@@ -10,10 +10,14 @@ import NavigationLink from "@/views/shared/NavigationLink";
 
 const articles = [{
   id: "1",
-  title: "С чего начать при переезде и подготовка",
+  title: "С&nbsp;чего начать при переезде и&nbsp;подготовка",
   nav: [{
     link: "#",
-    text: "Поиск ваканчий по сервису",
+    text: "Поиск ваканчий по&nbsp;сервису и&nbsp;главные поиски",
+  },
+  {
+    link: "#",
+    text: "Дорогостоящие вакансии",
   },
   {
     link: "#",
@@ -22,18 +26,14 @@ const articles = [{
   {
     link: "#",
     text: "Дорогостоящие вакансии",
-  },
-  {
-    link: "#",
-    text: "Дорогостоящие вакансии",
   }],
 },
 {
   id: "2",
-  title: "С чего начать при переезде и подготовка",
+  title: "Важные пункти оформления при переезде",
   nav: [{
     link: "#",
-    text: "Поиск ваканчий по сервису",
+    text: "Поиск ваканчий по&nbsp;сервису",
   },
   {
     link: "#",
@@ -50,10 +50,10 @@ const articles = [{
 },
 {
   id: "3",
-  title: "С чего начать при переезде и подготовка",
+  title: "Важные пункти оформления при переезде",
   nav: [{
     link: "#",
-    text: "Поиск ваканчий по сервису",
+    text: "Поиск ваканчий по&nbsp;сервису",
   },
   {
     link: "#",
@@ -91,12 +91,15 @@ const SectionRelocation = () => {
                   "relocation__article--active": activeStep === article.id
                 })}
               >
-                <Title className="relocation__title" level={3}>{article.title}</Title>
+                <Title className="relocation__title" level={3} parseString={article.title} />
                 <nav className="relocation__nav">
                   {article.nav.map((navLink, index) => (
-                    <NavigationLink className="relocation__nav-link truncate" href={navLink.link} key={index}>
-                      {navLink.text}
-                    </NavigationLink>
+                    <NavigationLink
+                      key={index}
+                      className="relocation__nav-link"
+                      href={navLink.link}
+                      parseString={navLink.text}
+                    />
                   ))}
                 </nav>
               </article>

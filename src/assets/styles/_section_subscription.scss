@@ -2,11 +2,19 @@
   background-color: var(--blue);
   padding: 60px 0;
   min-height: 425px;
+  @media (min-width: 900px) {
+    min-height: 374px;
+    padding-top: 69px;
+    padding-bottom: 69px;
+  }
   .section__wrapper {
     padding: 0 16px;
   }
   .section__header {
     padding-bottom: 8px;
+    @media (min-width: 900px) {
+      padding-bottom: 15px;
+    }
   }
   .section__title {
     color: var(--white);
@@ -19,6 +27,8 @@
     @media (min-width: 900px) {
       font-size: 30px;
       line-height: 1.26;
+      max-width: 500px;
+      margin-bottom: 10px;
     }
     @media (min-width: 1280px) {
       font-size: 29px;
@@ -39,22 +49,42 @@
       line-height: 1.18;
     }
   }
+  .subscription__form {
+    @media (min-width: 900px) {
+      display: grid;
+      grid-template-columns: 435px 169px;
+      gap: 23px;
+      max-width: 628px;
+      padding-left: 1px;
+      margin: 0 auto;
+    }
+  }
   .subscription__field {
     &:last-child {
       text-align: center;
+      @media (min-width: 900px) {
+        text-align: left;
+      }
     }
     .input {
+      border-radius: 4px;
       height: 54px;
       padding: 0 24px;
     }
     .checkbox {
       max-width: 270px;
+      @media (min-width: 900px) {
+        max-width: inherit;
+      }
       &.ant-checkbox-wrapper {
         line-height: 1 !important;
       }
       .ant-checkbox-label {
         text-align: left;
         padding: 0 15px !important;
+        @media (min-width: 900px) {
+          padding-top: 5px !important;
+        }
         .text {
           color: var(--white);
           font-size: 12px;
@@ -68,6 +98,9 @@
     padding-top: 16px;
     padding-bottom: 8px;
     text-align: center;
+    @media (min-width: 900px) {
+      padding: 0;
+    }
     .button-submit {
       background-color: var(--yellow);
       border-radius: 5px;
@@ -75,6 +108,9 @@
       height: 54px;
       &:hover, &:focus {
         background-color: var(--yellow);
+      }
+      @media (min-width: 900px) {
+        width: 100%;
       }
       .text {
         color: #292828;

@@ -1,10 +1,7 @@
 .section--vacancies {
   background-color: var(--grey-light);
-  padding: 0 15px 30px;
+  padding-bottom: 30px;
   position: relative;
-  @media (min-width: 900px) {
-    padding: 0 68px 30px;
-  }
   &:before, &:after {
     content: '';
     position: absolute;
@@ -38,11 +35,6 @@
         url("/images/md/bg-section-vacancies@2x.png") type("image/png") 2x
       );
     }
-  }
-
-  .section__wrapper {
-    position: relative;
-    z-index: 1;
   }
   .section__header {
     padding-top: 54px;
@@ -150,7 +142,6 @@
     .button-find-more {
       .text {
         @media (min-width: 900px) {
-          font-size: 14px;
           padding-top: 2px;
           text-indent: 1px;
         }

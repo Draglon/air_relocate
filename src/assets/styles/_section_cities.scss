@@ -6,12 +6,6 @@
     padding-top: 46px;
     padding-bottom: 69px;
   }
-  .section__wrapper {
-    padding: 0 15px;
-    @media (min-width: 900px) {
-      padding: 0 68px;
-    }
-  }
   .section__title {
     font-size: 26px;
     font-weight: 700;
@@ -54,7 +48,6 @@
     .button-find-more {
       .text {
         @media (min-width: 900px) {
-          font-size: 14px;
           padding-top: 1px;
           text-indent: -2px;
         }
