@@ -4,6 +4,9 @@
   justify-content: center;
   gap: 12px;
   padding: 2px;
+  @media (min-width: 900px) {
+    display: none;
+  }
 }
 .stepper__step {
   background-color: var(--blue_30);

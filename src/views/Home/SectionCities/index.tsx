@@ -30,6 +30,13 @@ const articles = [{
   description: "785 открытых вакансий",
   src: bridgeSRC,
   alt: "City"
+},
+{
+  id: "3",
+  title: "Лондон",
+  description: "785 открытых вакансий",
+  src: bridgeSRC,
+  alt: "City"
 }];
 
 const SectionCities = () => {
@@ -43,9 +50,7 @@ const SectionCities = () => {
       <div className="section__wrapper">
         <header className="section__header">
           <Title className="section__title" level={1} parseString={t("cities.title")} />
-          <div className='section__description text-center'>
-            <Text className="section__text" parseString={t("cities.description")} />
-          </div>
+          <Paragraph className="section__description" parseString={t("cities.description")} />
         </header>
 
         <section className="cities">

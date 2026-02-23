@@ -2,10 +2,15 @@
   background-color: var(--grey-light);
   padding-top: 2px;
   padding-bottom: 60px;
+  @media (min-width: 900px) {
+    padding-top: 46px;
+    padding-bottom: 69px;
+  }
   .section__wrapper {
     padding: 0 15px;
-  }
-  .section__header {
+    @media (min-width: 900px) {
+      padding: 0 68px;
+    }
   }
   .section__title {
     font-size: 26px;
@@ -18,19 +23,24 @@
     margin-bottom: 4px;
     @media (min-width: 900px) {
       font-size: 30px;
+      margin-bottom: 14px;
+      max-width: inherit;
     }
   }
   .section__description {
-    margin-bottom: 18px;
-  }
-  .section__text {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.45;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 18px;
     max-width: 300px;
     text-indent: 5px;
+    text-align: center;
+    @media (min-width: 900px) {
+      max-width: 540px;
+      text-indent: 1px;
+      margin-bottom: 30px;
+    }
     @media (min-width: 1280px) {
       font-size: 16px;
     }
@@ -39,13 +49,34 @@
       line-height: 1.15;
     }
   }
+
+  .section__buttons {
+    .button-find-more {
+      .text {
+        @media (min-width: 900px) {
+          font-size: 14px;
+          padding-top: 1px;
+          text-indent: -2px;
+        }
+      }
+    }
+  }
 }
 
 .cities {
   padding-bottom: 29px;
+  @media (min-width: 900px) {
+    padding-bottom: 0;
+  }
 }
 .cities__wrapper {
   padding-bottom: 21px;
+  @media (min-width: 900px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-bottom: 20px;
+  }
 }
 .cities__article {
   background-color: var(--white);
@@ -57,11 +88,18 @@
   &--active {
     display: block;
   }
+  @media (min-width: 900px) {
+    display: block !important;
+    min-height: 244px;
+  }
 }
 .cities__picture {
   display: block;
   padding-top: 29px;
   padding-bottom: 11px;
+  @media (min-width: 900px) {
+    padding-top: 27px;
+  }
 }
 .cities__image {
   display: block;
@@ -84,6 +122,10 @@
   line-height: 1.48;
   text-align: center;
   margin-bottom: 15px !important;
+  @media (min-width: 900px) {
+    margin-top: -1px;
+    margin-bottom: 13px !important;
+  }
   @media (min-width: 1920px) {
     font-size: 14px;
     line-height: 1.18;
@@ -91,6 +133,9 @@
 }
 .cities__buttons {
   text-align: center;
+  @media (min-width: 900px) {
+    padding-right: 1px;
+  }
   .button-read-more {
     background-color: var(--white_0);
     border: 1px solid #3F3CE3;
@@ -114,6 +159,7 @@
       text-transform: uppercase;
       @media (min-width: 900px) {
         color: #3F3CE3;
+        padding-top: 2px;
       }
     }
   }
