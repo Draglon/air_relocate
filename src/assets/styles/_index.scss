@@ -1,20 +1,18 @@
 @use 'variables';
 @use 'globals';
-@use 'mixins/index';
+@use 'mixins';
 @use 'fonts';
 
-@use 'button';
-@use 'checkbox';
+@use 'antd/button';
+@use 'antd/checkbox';
+
+@use 'shared/locale_switcher';
+@use 'shared/theme_switcher';
+@use 'shared/stepper';
 
 @use 'page';
 @use 'header';
-@use 'header_logo';
-@use 'header_menu';
-@use 'header_menu_mobile';
 @use 'footer';
-@use 'locale_switcher';
-@use 'theme_switcher';
-@use 'stepper';
 @use 'section';
 @use 'section_main';
 @use 'section_vacancies';

@@ -1,0 +1,15 @@
+.footer__logo {
+  display: block;
+  margin-bottom: 47px;
+  @media (min-width: 900px) {
+    margin: 0;
+  }
+}
+
+.footer__logo-image {
+  display: block;
+  margin: 0 auto;
+  @media (min-width: 900px) {
+    margin: 0;
+  }
+}

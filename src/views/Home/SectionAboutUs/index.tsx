@@ -55,32 +55,34 @@ const SectionAboutUs = () => {
 
         <section className="about-us">
           <div className="about-us__wrapper">
-            {articles.map(article => (
-              <article
-                key={article.id}
-                className={clsx("about-us__article", {
-                  "about-us__article--active": activeStep === article.id
-                })}
-              >
-                <header className="about-us__header">
-                  <picture className="about-us__picture">
-                    <Image className="about-us__image" src={article.avatarSRC} alt={article.title} width="39" height="39" />
-                  </picture>
-                  <div className="about-us__content">
-                    <Title className="about-us__title" level={3}>{article.title}</Title>
-                    <Text className="about-us__position">{article.position}</Text>
-                  </div>
-                </header>
+            <div className="about-us__container">
+              {articles.map(article => (
+                <article
+                  key={article.id}
+                  className={clsx("about-us__article", {
+                    "about-us__article--active": activeStep === article.id
+                  })}
+                >
+                  <header className="about-us__header">
+                    <picture className="about-us__picture">
+                      <Image className="about-us__image" src={article.avatarSRC} alt={article.title} width="39" height="39" />
+                    </picture>
+                    <div className="about-us__content">
+                      <Title className="about-us__title" level={3}>{article.title}</Title>
+                      <Text className="about-us__position">{article.position}</Text>
+                    </div>
+                  </header>
 
-                <Paragraph className="about-us__description truncate-multiline" parseString={article.description} />
+                  <Paragraph className="about-us__description truncate-multiline" parseString={article.description} />
 
-                <footer className="about-us__buttons">
-                  <Button className="button-read-more" color="primary" variant="link">
-                    <Text>{tShared("readTheFullReview")}</Text>
-                  </Button>
-                </footer>
-              </article>
-            ))}
+                  <footer className="about-us__buttons">
+                    <Button className="button-read-more" color="primary" variant="link">
+                      <Text>{tShared("readTheFullReview")}</Text>
+                    </Button>
+                  </footer>
+                </article>
+              ))}
+            </div>
           </div>
 
           <Stepper steps={steps} activeStep={activeStep} setActiveStep={setActiveStep} />

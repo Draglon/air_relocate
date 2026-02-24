@@ -1,0 +1,38 @@
+.footer__copyright {
+  padding-top: 31px;
+  position: relative;
+  @media (min-width: 900px) {
+    padding-top: 27px;
+    text-indent: -11px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 10px;
+    background-color: rgba(196, 196, 196, 0.1);
+    height: 1px;
+    @media (min-width: 900px) {
+      left: 0;
+      right: 0;
+    }
+  }
+  .paragraph {
+    color: var(--white_40);
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.51;
+    text-align: center;
+    padding: 0 !important;
+    @media (min-width: 900px) {
+      font-size: 12px;
+    }
+    br {
+      display: none;
+      @media (min-width: 900px) {
+        display: block;
+      }  
+    }
+  }
+}
