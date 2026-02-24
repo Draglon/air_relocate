@@ -53,13 +53,15 @@ const SectionAboutUs = () => {
           <Title className="section__title" level={1} parseString={t("aboutUs.title")} />
         </header>
 
-        <section className="about-us">
-          <div className="about-us__wrapper">
-            <div className="about-us__container">
+        <section className="slider about-us">
+          <div className="slider__wrapper about-us__wrapper">
+            <div className="slider__arrow-left" role="button"><i className="icon icon-arrow-left" /></div>
+            <div className="slider__arrow-right" role="button"><i className="icon icon-arrow-right" /></div>
+            <div className="slider__container about-us__container">
               {articles.map(article => (
                 <article
                   key={article.id}
-                  className={clsx("about-us__article", {
+                  className={clsx("slider__slide about-us__article", {
                     "about-us__article--active": activeStep === article.id
                   })}
                 >

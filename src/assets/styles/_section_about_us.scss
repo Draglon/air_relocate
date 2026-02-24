@@ -6,10 +6,15 @@
     padding-top: 74px;
     padding-bottom: 70px;
   }
+  .section__wrapper {
+    @media (min-width: 900px) {
+      padding: 0 58px;
+    }
+  }
   .section__header {
     padding-bottom: 8px;
     @media (min-width: 900px) {
-      padding-bottom: 20px;
+      padding-bottom: 14px;
     }
   }
   .section__title {
@@ -23,28 +28,15 @@
     @media (min-width: 900px) {
       font-size: 30px;
       text-indent: 0;
+      margin-bottom: 0;
     }
   }
 }
 
-.about-us {
-  padding-bottom: 29px;
-  @media (min-width: 900px) {
-    padding-bottom: 0;
-  }
-}
 .about-us__wrapper {
-  padding-bottom: 21px;
   @media (min-width: 900px) {
-    padding-bottom: 20px;
-    overflow: hidden;
+    padding-bottom: 21px;
   }
-}
-.about-us__container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 20px;
 }
 .about-us__article {
   background-color: var(--white);
@@ -57,6 +49,7 @@
   }
   @media (min-width: 900px) {
     display: block;
+    padding: 37px 45px 35px;
     min-height: 262px;
     min-width: calc(50% - 10px);
   }
@@ -102,7 +95,8 @@
   margin-bottom: 23px !important;
   @media (min-width: 900px) {
     font-size: 13px;
-    line-height: 1.4;
+    line-height: 1.8;
+    margin-bottom: 15px !important;
   }
 }
 .about-us__buttons {

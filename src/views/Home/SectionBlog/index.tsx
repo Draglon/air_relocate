@@ -62,36 +62,40 @@ const SectionBlog = () => {
           <Paragraph className='section__description' parseString={t("blog.description")} />
         </header>
 
-        <section className="blog">
-          <div className="blog__wrapper">
-            {articles.map(article => (
+        <section className="slider blog">
+          <div className="slider__wrapper blog__wrapper">
+            <div className="slider__arrow-left" role="button"><i className="icon icon-arrow-left" /></div>
+            <div className="slider__arrow-right" role="button"><i className="icon icon-arrow-right" /></div>
+            <div className="slider__container blog__container">
+              {articles.map(article => (
                 <article
                   key={article.id}
-                  className={clsx("blog__article", {
+                  className={clsx("slider__slide blog__article", {
                     "blog__article--active": activeStep === article.id
                   })}
                 >
-                <picture className="blog__picture">
-                  <Image className="blog__image" src={article.src} alt={article.srcAlt} width="330" height="140" />
-                </picture>
-                <div className="blog__content">
-                  <header className="blog__header">
-                    <Text className="blog__text" fontFamily="roboto" parseString={t("blog.experience")} />
-                    <i className="icon icon-mark" />
-                  </header>
-                  <div className="blog__description">
-                    <Title className="blog__title" level={3} parseString={article.title} />
-                    <Paragraph className="blog__text truncate-multiline" parseString={article.description} />
+                  <picture className="blog__picture">
+                    <Image className="blog__image" src={article.src} alt={article.srcAlt} width="330" height="140" />
+                  </picture>
+                  <div className="blog__content">
+                    <header className="blog__header">
+                      <Text className="blog__text" fontFamily="roboto" parseString={t("blog.experience")} />
+                      <i className="icon icon-mark" />
+                    </header>
+                    <div className="blog__description">
+                      <Title className="blog__title" level={3} parseString={article.title} />
+                      <Paragraph className="blog__text truncate-multiline" parseString={article.description} />
+                    </div>
+                    <footer className="blog__footer">
+                      <Text className="blog__text" fontFamily="roboto">{article.time}</Text>
+                      <a className="blog__link" href={article.link}>
+                        <Text>{tShared("readMore")}</Text>
+                      </a>
+                    </footer>
                   </div>
-                  <footer className="blog__footer">
-                    <Text className="blog__text" fontFamily="roboto">{article.time}</Text>
-                    <a className="blog__link" href={article.link}>
-                      <Text>{tShared("readMore")}</Text>
-                    </a>
-                  </footer>
-                </div>
-              </article>
-            ))}
+                </article>
+              ))}
+            </div>
           </div>
 
           <Stepper steps={steps} activeStep={activeStep} setActiveStep={setActiveStep} />
