@@ -10,6 +10,10 @@
     padding-top: 35px;
     padding-bottom: 87px;
   }
+  @media (min-width: 1920px) {
+    padding-top: 31px;
+    padding-bottom: 90px;
+  }
   .section__title {
     font-size: 26px;
     font-weight: 700;
@@ -50,7 +54,8 @@
     }
     @media (min-width: 1920px) {
       font-size: 18px;
-      line-height: 1.15;
+      margin-bottom: 49px;
+      max-width: 610px;
     }
   }
 
@@ -88,6 +93,9 @@
     gap: 30px;
     padding-bottom: 41px;
   }
+  @media (min-width: 1920px) {
+    padding-bottom: 47px;
+  }
 }
 .cities__article {
   background-color: var(--white);
@@ -104,12 +112,21 @@
   @media (min-width: 1280px) {
     padding-top: 75px;
   }
+  @media (min-width: 1920px) {
+    padding-top: 68px;
+  }
   &:hover {
     box-shadow: 0 4px 22px 0 var(--box-shadow-hover);
     @media (min-width: 1280px) {
       padding-top: 55px;
       .cities__text {
         margin-bottom: 26px !important;
+      }
+    }
+    @media (min-width: 1920px) {
+      padding-top: 52px;
+      .cities__text {
+        margin-bottom: 20px !important;
       }
     }
   }
@@ -120,6 +137,9 @@
 .cities__picture {
   display: block;
   padding-bottom: 11px;
+  @media (min-width: 1920px) {
+    padding-bottom: 14px;
+  }
 }
 .cities__image {
   display: block;
@@ -132,8 +152,8 @@
   margin: 0 !important;
   text-align: center;
   @media (min-width: 1920px) {
-    font-size: 18px;
-    line-height: 1.15;
+    font-size: 18px !important;
+    margin-bottom: 3px !important;
   }
 }
 .cities__text {

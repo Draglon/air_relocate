@@ -39,8 +39,8 @@ const GuestHeader = () => {
           </div>
         </div>
 
-        <div className="header__left-side">
-          <LocalSwitcherSelect />
+        <div className="header__right-side">
+          {/* <LocalSwitcherSelect /> */}
           <div className="header__buttons">
             <Button className="button-clients" color="default" variant="link">
               <Text>{t("clients")}</Text>

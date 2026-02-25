@@ -1,20 +1,22 @@
 .section--main {
   padding-top: 148px;
-  padding-left: 15px;
-  padding-right: 15px;
   padding-bottom: 99px;
   position: relative;
+  min-height: 600px;
   @media (min-width: 900px) {
     padding-top: 137px;
-    padding-bottom: 145px;
+    padding-bottom: 144px;
+    min-height: 512px;
   }
   @media (min-width: 1280px) {
     padding-top: 166px;
     padding-bottom: 219px;
+    min-height: 638px;
   }
   @media (min-width: 1920px) {
     padding-top: 160px;
-    padding-bottom: 228px;
+    padding-bottom: 220px;
+    min-height: 662px;
   }
   &:before, &:after {
     content: '';
@@ -103,7 +105,7 @@
   // Main Title
   .section__title {
     margin-top: 0;
-    margin-bottom: 11px;
+    margin-bottom: 10px;
     text-align: center;
     @media (min-width: 900px) {
       margin-bottom: 20px;
@@ -118,7 +120,7 @@
     .section__title-line_1, .section__title-line_2 {
       font-size: 27px;
       font-weight: 700;
-      line-height: 117%;
+      line-height: 1.22;
       text-indent: -2px;
       text-align: center;
       @media (min-width: 900px) {
@@ -369,7 +371,7 @@
 
   // Main form
   .section__form {
-    margin-top: 24px;
+    margin-top: 23px;
     @media (min-width: 900px) {
       display: grid;
       grid-template-columns: 356.62px 280.52px 77.8px;
@@ -418,7 +420,7 @@
         box-shadow: 0 4px 22px 0 var(--black_07);
         border: none;
         border-radius: 4px;
-        padding: 0 29px;
+        padding: 0 30px;
         max-width: 450px;
         height: 54px;
 

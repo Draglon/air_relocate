@@ -85,14 +85,12 @@ const SectionVacancies = () => {
         <section className="vacancies">
           {articles.map(article => (
             <article className="vacancies__article" key={article.id}>
+              <i className={clsx("icon", { "icon-mark": !article.hot, "icon-mark-full": article.hot })} />
               <header className="vacancies__header">
                 <picture className="vacancies__picture">
                   <Image className="vacancies__image" src={article.src} alt={article.alt} width="37" height="37" />
                 </picture>
                 <Title className="vacancies__title" level={3} parseString={article.title} />
-                <i className={clsx("icon", { "icon-mark": !article.hot, "icon-mark-full": article.hot })} />
-              </header>
-              <div className="vacancies__description">
                 <ul className="vacancies__list">
                   <li className="vacancies__item">
                     <i className="icon icon-city" />
@@ -103,13 +101,15 @@ const SectionVacancies = () => {
                     <Text className="vacancies__item-text" fontFamily="roboto" parseString={article.list.location} />
                   </li>
                 </ul>
+              </header>
+              <div className="vacancies__description">
                 <Paragraph className="vacancies__text truncate-multiline" parseString={article.description} />
-                <div className="vacancies__buttons">
-                  <Button className="button-read-more" color="primary" variant={article.hot ? "solid" : "outlined" }>
-                    <Text fontFamily="roboto">{tShared("moreDetails")}</Text>
-                  </Button>
-                </div>
               </div>
+              <footer className="vacancies__buttons">
+                <Button className="button-read-more" color="primary" variant={article.hot ? "solid" : "outlined" }>
+                  <Text fontFamily="roboto">{tShared("moreDetails")}</Text>
+                </Button>
+              </footer>
             </article>
           ))}
         </section>
