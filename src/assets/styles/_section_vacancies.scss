@@ -35,11 +35,36 @@
         url("/images/md/bg-section-vacancies@2x.png") type("image/png") 2x
       );
     }
+    @media (min-width: 1280px) {
+      background-image: url("/images/lg/bg-section-vacancies@1x.png");
+      background-image: -webkit-image-set(
+        url("/images/lg/bg-section-vacancies@1x.png") type("image/png") 1x,
+        url("/images/lg/bg-section-vacancies@2x.png") type("image/png") 2x
+      );
+      background-image: image-set(
+        url("/images/lg/bg-section-vacancies@1x.png") type("image/png") 1x,
+        url("/images/lg/bg-section-vacancies@2x.png") type("image/png") 2x
+      );
+    }
+    @media (min-width: 1920px) {
+      background-image: url("/images/xl/bg-section-vacancies@1x.png");
+      background-image: -webkit-image-set(
+        url("/images/xl/bg-section-vacancies@1x.png") type("image/png") 1x,
+        url("/images/xl/bg-section-vacancies@2x.png") type("image/png") 2x
+      );
+      background-image: image-set(
+        url("/images/xl/bg-section-vacancies@1x.png") type("image/png") 1x,
+        url("/images/xl/bg-section-vacancies@2x.png") type("image/png") 2x
+      );
+    }
   }
   .section__header {
     padding-top: 54px;
     @media (min-width: 900px) {
       padding-top: 58px;
+    }
+    @media (min-width: 1280px) {
+      padding-top: 69px;
     }
   }
   .section__title {
@@ -55,13 +80,6 @@
     }
   }
   .section__description {
-    margin-bottom: 28px;
-    text-align: center;
-    @media (min-width: 900px) {
-      margin-bottom: 35px;
-    }
-  }
-  .section__text {
     color: var(--white);
     font-size: 14px;
     font-weight: 400;
@@ -69,15 +87,18 @@
     max-width: 310px;
     display: inline-block;
     text-indent: 3px;
+    margin-bottom: 28px;
+    text-align: center;
     @media (min-width: 900px) {
       font-size: 16px;
       line-height: 1.45;
       max-width: inherit;
       text-indent: 7px;
+      margin-bottom: 35px;
     }
-    @media (min-width: 1920px) {
-      font-size: 18px;
-      line-height: 1.15;
+    @media (min-width: 1280px) {
+      display: block;
+      margin-bottom: 36px;
     }
   }
   .section__buttons {
@@ -139,11 +160,18 @@
     @media (min-width: 900px) {
       padding-left: 7px;
     }
+    @media (min-width: 1280px) {
+      padding-left: 0;
+    }
     .button-find-more {
       .text {
         @media (min-width: 900px) {
           padding-top: 2px;
           text-indent: 1px;
+        }
+        @media (min-width: 1280px) {
+          padding-top: 0;
+          text-indent: 0;
         }
       }
     }
@@ -156,6 +184,11 @@
   margin-bottom: 20px;
   @media (min-width: 900px) {
     gap: 20px;
+  }
+  @media (min-width: 1280px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
   }
   .vacancies__article {
     background-color: var(--white);
@@ -180,10 +213,16 @@
       @media (min-width: 900px) {
         right: 30px;
       }
+      @media (min-width: 1280px) {
+        right: 24px;
+      }
       &:before {
         font-size: 22px;
         @media (min-width: 900px) {
           font-size: 18px;
+        }
+        @media (min-width: 1280px) {
+          font-size: 17px;
         }
       }
       &.icon-mark {
@@ -239,6 +278,11 @@
       margin-left: -2px;
       margin-bottom: 18px;
     }
+    @media (min-width: 1280px) {
+      gap: 14px;
+      margin-top: -16px;
+      margin-bottom: 10px;
+    }
   }
   .vacancies__item {
     display: flex;
@@ -248,12 +292,16 @@
     .icon {
       color: #AEAEAE;
       margin-right: 8px;
+      @media (min-width: 1280px) {
+        margin-top: -1px;
+      }
       &.icon-city {
-          padding-top: 3px;
+        padding-top: 3px;
         &:before {
           font-size: 14px;
           margin-left: 2px;
         }
+
       }
       &.icon-location {
         &:before {
@@ -281,6 +329,11 @@
     @media (min-width: 900px) {
       display: block;
       max-width: 542px;
+    }
+    @media (min-width: 1280px) {
+      display: -webkit-box;
+      max-width: inherit;
+      margin-bottom: 10px;
     }
     @media (min-width: 1920px) {
       font-size: 13px;

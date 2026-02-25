@@ -6,6 +6,10 @@
     padding-top: 46px;
     padding-bottom: 69px;
   }
+  @media (min-width: 1280px) {
+    padding-top: 35px;
+    padding-bottom: 87px;
+  }
   .section__title {
     font-size: 26px;
     font-weight: 700;
@@ -20,6 +24,9 @@
       margin-bottom: 14px;
       max-width: inherit;
     }
+    @media (min-width: 1280px) {
+      margin-bottom: 19px;
+    }
   }
   .section__description {
     font-size: 14px;
@@ -31,12 +38,15 @@
     text-indent: 5px;
     text-align: center;
     @media (min-width: 900px) {
-      max-width: 540px;
       text-indent: 1px;
       margin-bottom: 30px;
+      max-width: 540px;
     }
     @media (min-width: 1280px) {
       font-size: 16px;
+      text-indent: 2px;
+      margin-bottom: 51px;
+      max-width: 542px;
     }
     @media (min-width: 1920px) {
       font-size: 18px;
@@ -50,6 +60,9 @@
         @media (min-width: 900px) {
           padding-top: 1px;
           text-indent: -2px;
+        }
+        @media (min-width: 900px) {
+          text-indent: 0;
         }
       }
     }
@@ -70,6 +83,11 @@
     gap: 20px;
     padding-bottom: 20px;
   }
+  @media (min-width: 1280px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-bottom: 41px;
+  }
 }
 .cities__article {
   background-color: var(--white);
@@ -77,22 +95,31 @@
   box-shadow: 0 4px 22px 0 var(--box-shadow);
   display: none;
   min-height: 244px;
-  padding: 20px;
-  &--active {
-    display: block;
-  }
+  padding: 49px 20px 20px;
+  transition: padding-top .3s;
   @media (min-width: 900px) {
     display: block !important;
-    min-height: 244px;
+    padding-top: 47px;
+  }
+  @media (min-width: 1280px) {
+    padding-top: 75px;
+  }
+  &:hover {
+    box-shadow: 0 4px 22px 0 var(--box-shadow-hover);
+    @media (min-width: 1280px) {
+      padding-top: 55px;
+      .cities__text {
+        margin-bottom: 26px !important;
+      }
+    }
+  }
+  &--active {
+    display: block;
   }
 }
 .cities__picture {
   display: block;
-  padding-top: 29px;
   padding-bottom: 11px;
-  @media (min-width: 900px) {
-    padding-top: 27px;
-  }
 }
 .cities__image {
   display: block;
@@ -115,6 +142,7 @@
   line-height: 1.48;
   text-align: center;
   margin-bottom: 15px !important;
+  transition: margin-bottom .3s;
   @media (min-width: 900px) {
     margin-top: -1px;
     margin-bottom: 13px !important;
@@ -136,9 +164,13 @@
     padding: 0 10px;
     min-width: 114px;
     height: 32px;
+    transition: background-color .3s, border-color .3s;
     &:hover, &:focus, &:active {
-      background-color: var(--white_0);
-      border: 1px solid #3F3CE3;
+      background-color: var(--blue-light) !important;
+      border: 1px solid var(--blue-light) !important;
+      span {
+        color: var(--white) !important;
+      }
     }
     @media (min-width: 1920px) {
       min-width: 110px;
@@ -150,6 +182,7 @@
       font-size: 11px;
       line-height: 1.76;
       text-transform: uppercase;
+      transition: color .3s;
       @media (min-width: 900px) {
         color: #3F3CE3;
         padding-top: 2px;

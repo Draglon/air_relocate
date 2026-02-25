@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 
 import photoSRC from "@/../public/images/photo_2.png";
 import Button from "@/views/shared/antd/Button";
-import { Title, Text } from "@/views/shared/antd/Typography";
+import { Title, Text, Paragraph } from "@/views/shared/antd/Typography";
 
 const articles = [
   {
@@ -14,7 +14,7 @@ const articles = [
     src: photoSRC,
     alt: "Photo alt",
     title: "Senior Software Engineer (Full&nbsp;Stack)",
-    description: "Bending Spoons is&nbsp;a&nbsp;fast-growing tech company focused on&nbsp;building and marketing mobile applications. Despite being such a&nbsp;young company...",
+    description: "Our trading platform is&nbsp;loaded with features. Our easy-to-use interface, quick funding option",
     list: {
       city: "General VR&nbsp;Solutions",
       location: "Норвегия, Франфурт на&nbsp;Майне",
@@ -69,9 +69,7 @@ const SectionVacancies = () => {
           <Title className="section__title" level={1}>
             {t("vacancies.title")}
           </Title>
-          <p className="section__description">
-            <Text className="section__text" parseString={t("vacancies.description")} />
-          </p>
+          <Paragraph className="section__description" parseString={t("vacancies.description")} />
         </header>
 
         <div className="tabs">
@@ -105,7 +103,7 @@ const SectionVacancies = () => {
                     <Text className="vacancies__item-text" fontFamily="roboto" parseString={article.list.location} />
                   </li>
                 </ul>
-                <Text className="vacancies__text" parseString={article.description} />
+                <Paragraph className="vacancies__text truncate-multiline" parseString={article.description} />
                 <div className="vacancies__buttons">
                   <Button className="button-read-more" color="primary" variant={article.hot ? "solid" : "outlined" }>
                     <Text fontFamily="roboto">{tShared("moreDetails")}</Text>
