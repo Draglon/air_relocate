@@ -9,6 +9,10 @@
     padding-top: 0;
     width: 307px;
   }
+  @media (min-width: 1280px) {
+    padding-top: 7px;
+    width: 247px;
+  }
   .footer__title {
     color: var(--white);
     font-size: 14px;
