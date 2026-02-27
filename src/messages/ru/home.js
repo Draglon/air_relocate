@@ -50,7 +50,7 @@ const home = {
       }
     },
     "subscription": {
-      "title": "Хочешь получать лучшие статьи от&nbsp;Aitrelocate раз&nbsp;в&nbsp;неделю?",
+      "title": "Хочешь получать лучшие статьи от&nbsp;Aitrelocate раз в&nbsp;неделю?",
       "description": "Подпишись на&nbsp;рассылку Aitrelocate",
       "form": {
         "email": {

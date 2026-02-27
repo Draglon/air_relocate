@@ -37,10 +37,18 @@
   @media (min-width: 900px) {
     left: -20px;
   }
+  @media (min-width: 1280px) {
+    top: calc(50% + 12px);
+    left: -38px;
+  }
 }
 .slider__arrow-right {
   @media (min-width: 900px) {
     right: -20px;
+  }
+  @media (min-width: 1280px) {
+    top: calc(50% + 12px);
+    right: -38px;
   }
 }
 .slider__container {
