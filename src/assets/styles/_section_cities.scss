@@ -58,20 +58,6 @@
       max-width: 610px;
     }
   }
-
-  .section__buttons {
-    .button-find-more {
-      .text {
-        @media (min-width: 900px) {
-          padding-top: 1px;
-          text-indent: -2px;
-        }
-        @media (min-width: 900px) {
-          text-indent: 0;
-        }
-      }
-    }
-  }
 }
 
 .cities {

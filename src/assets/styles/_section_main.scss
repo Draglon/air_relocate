@@ -14,7 +14,7 @@
     min-height: 638px;
   }
   @media (min-width: 1920px) {
-    padding-top: 160px;
+    padding-top: 161px;
     padding-bottom: 220px;
     min-height: 662px;
   }
@@ -114,7 +114,7 @@
       margin-bottom: 28px;
     }
     @media (min-width: 1920px) {
-      margin-bottom: 34px;
+      margin-bottom: 33px;
     }
 
     .section__title-line_1, .section__title-line_2 {
@@ -384,7 +384,8 @@
       margin-top: 36px;
     }
     @media (min-width: 1920px) {
-      margin-top: 38px;
+      margin-top: 40px;
+      padding-right: 12px;
     }
 
     .section__field {
@@ -393,10 +394,10 @@
       @media (min-width: 900px) {
         margin-bottom: 0;
       }
-      @media (min-width: 1920px) {
-        position: relative;
-        left: -7px;
-      }
+      // @media (min-width: 1920px) {
+      //   position: relative;
+      //   left: -7px;
+      // }
 
       .section__input {
         background-color: var(--white);
@@ -434,7 +435,6 @@
     }
     .section__buttons {
       margin-top: 16px;
-      text-align: center;
       @media (min-width: 900px) {
         margin-top: 0;
       }
@@ -446,13 +446,10 @@
         @media (min-width: 900px) {
           width: 77.8px;
         }
-        @media (min-width: 1920px) {
-          position: relative;
-          left: -7px;
-        }
         .icon-search {
           color: var(--white);
           font-size: 18px;
+          padding-right: 2px;
         }
       }
     }

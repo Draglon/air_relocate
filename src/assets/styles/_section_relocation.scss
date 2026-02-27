@@ -59,6 +59,16 @@
       margin: 0 auto;
     }
   }
+  .section__buttons {
+    padding-left: 1px;
+    .button-find-more {
+      .text {
+        @media (min-width: 900px) {
+          padding-left: 2px;
+        }
+      }
+    }
+  }
 }
 
 .relocation {

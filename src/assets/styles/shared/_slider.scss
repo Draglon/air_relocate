@@ -48,6 +48,9 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: 20px;
+  @media (min-width: 1280px) {
+    gap: 30px;
+  }
 }
 .slider__slide {
 

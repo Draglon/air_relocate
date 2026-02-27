@@ -44,18 +44,18 @@ const articles = [
       location: "Норвегия, Франфурт на&nbsp;Майне",
     },
   },
-  {
-    id: "4",
-    hot: false,
-    src: photoSRC,
-    alt: "Photo alt",
-    title: "Senior Software Engineer (Full&nbsp;Stack)",
-    description: "Bending Spoons is&nbsp;a&nbsp;fast-growing tech company focused on&nbsp;building and marketing mobile applications. Despite being such a&nbsp;young company...",
-    list: {
-      city: "General VR&nbsp;Solutions",
-      location: "Норвегия, Франфурт на&nbsp;Майне",
-    },
-  }
+  // {
+  //   id: "4",
+  //   hot: false,
+  //   src: photoSRC,
+  //   alt: "Photo alt",
+  //   title: "Senior Software Engineer (Full&nbsp;Stack)",
+  //   description: "Bending Spoons is&nbsp;a&nbsp;fast-growing tech company focused on&nbsp;building and marketing mobile applications. Despite being such a&nbsp;young company...",
+  //   list: {
+  //     city: "General VR&nbsp;Solutions",
+  //     location: "Норвегия, Франфурт на&nbsp;Майне",
+  //   },
+  // }
 ];
 
 const SectionVacancies = () => {

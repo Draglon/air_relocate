@@ -2,16 +2,14 @@
   display: none;
   @media (min-width: 1280px) {
     display: block;
-  }
-  @media (min-width: 1920px) {
     padding-top: 29px;
   }
   .menu__nav {
     display: flex;
     align-items: center;
-    gap: 50px;
-    margin-left: 90px;
+    gap: 15px;
     padding-top: 7px;
+    padding-left: 90px;
   }
   .menu__nav-link {
     display: inline-block;
@@ -22,22 +20,32 @@
     text-decoration: none;
     text-shadow: 0 0 0 #292828;
     transition: text-shadow .1s;
+    min-width: 103px;
+    text-align: left;
 
     &:hover {
       color: var(--blue);
       text-shadow: 0 0 1px var(--blue);
     }
 
+    &:nth-child(1) {
+      @media (min-width: 1920px) {
+        min-width: 125px;
+      }
+    }
+
     &:nth-child(2) {
-      padding-left: 22px;
+      min-width: 86px;
+      @media (min-width: 1920px) {
+        min-width: 107px;
+      }
     }
 
     &:nth-child(3) {
-      padding-left: 23px;
-    }
-
-    &:nth-child(4) {
-      padding-left: 16px;
+      min-width: 123px;
+      @media (min-width: 1920px) {
+        min-width: 139px;
+      }
     }
   }
 }
